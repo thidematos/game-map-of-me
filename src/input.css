@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.borders {
+  @apply border-orange-400 border-solid border border-b-0;
+}
+
+.hint--strong {
+  @apply text-5xl font-amatic text-orange-500 font-bold;
+}
+
+.hint__img {
+  @apply w-[17%];
+}
+
+.modal {
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+
+  @apply duration-1000 opacity-0;
+}
