@@ -1,3 +1,3 @@
 'use strict';
 
-const app = new Puzzle(5, 3, 'sad');
+const app = new Puzzle(4, 3, 'sad');
