@@ -6,7 +6,7 @@
     <title>Tristeza =[</title>
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../dist/output.css" />
-    <script src="../node_modules/smooth-scrollbar/dist/smooth-scrollbar.js"></script>
+
     <script defer src="puzzle.js"></script>
     <script defer src="secondLevel.js"></script>
   </head>
@@ -14,16 +14,20 @@
     class="bg-brancoAzulado flex flex-col justify-center items-center gap-10"
   >
     <div
-      class="modal hidden bg-gray-100 w-[50vw] h-[50vh] absolute z-[9999] rounded-lg shadow-lg flex-row justify-center items-center p-10"
+      class="modal hidden bg-gray-100 w-[50vw] h-[50vh] absolute z-[9999] rounded-lg shadow-lg flex-row justify-center items-center p-10 gap-3"
     >
-      <img src="assets/end-1.png" alt="" class="w-[40%]" />
+      <img src="assets/end-2.png" alt="" class="w-[40%]" />
       <div class="flex flex-col justify-evenly items-center w-1/2 h-full">
-        <h1
-          class="modal__title font-amatic text-5xl text-orange-300 font-bold"
-        ></h1>
+        <h1 class="modal__title font-amatic text-5xl text-orange-300 font-bold">
+          Tristeza e desânimo...
+        </h1>
         <p
           class="modal__description text-lg font-jakarta text-gray-700 text-center"
-        ></p>
+        >
+          Jorge mostrou que, quando nos decepcionamos, ficamos tristes... Essa
+          tristeza pode nos deixar desanimados. Só não podemos esquecer que
+          amanhã será um novo dia mais bonito!
+        </p>
         <a
           href="#"
           class="flex flex-col justify-center items-center font-amatic text-3xl drop-shadow-md font-bold text-azul"
@@ -33,6 +37,15 @@
             class="drop-shadow-lg w-[40%]"
           />Mapa da Aventura!</a
         >
+      </div>
+      <div class="hidden flex-col justify-center items-center gap-3">
+        <img src="assets/puzzle-2.jpg" class="w-[50%] borders" alt="" />
+        <progress
+          value="0"
+          max="100"
+          id="progressBar"
+          class="bg-orange-300 rounded-lg"
+        ></progress>
       </div>
     </div>
     <div class="modal__cover hidden absolute z-[9998]"></div>
@@ -45,33 +58,40 @@
         class="hint__container flex flex-row justify-center items-center gap-6"
       >
         <div
-          class="hint__wrapper bg-gray-100 p-2 flex flex-col justify-center items-center gap-2 rounded-lg shadow-lg text-gray-900"
+          class="hint__wrapper bg-gray-100 p-8 flex flex-col justify-center items-center gap-2 rounded-lg shadow-lg text-gray-900"
         >
-          <img src="" alt="" />
-          <h3 class="hint__title font-amatic text-5xl">Bernardo fez um gol!</h3>
-          <p class="hint__description flex flex-row items-center gap-2 text-xl">
-            Bernardo fez um golaço no seu treino de futebol!!! Bernardo está
-            muito
-            <span class="hint--strong text-xl">feliz!</span>
+          <h3 class="hint__title font-amatic text-5xl">
+            Jorge queria brincar na rua...
+          </h3>
+          <p class="hint__description text-xl text-center">
+            Jorge estava ansioso para andar de bicicleta na rua.
+          </p>
+          <p
+            class="text-xl text-center flex flex-row justify-center items-center gap-2"
+          >
+            Quando viu pela janela que estava chovendo, Jorge ficou
+            <span class="text-5xl inline font-amatic text-azul">triste...</span>
           </p>
           <p class="hint__keyword text-xl flex flex-row items-center gap-2">
-            Quando está feliz, Bernardo gosta de
-            <span class="hint--strong">sorrir!</span>
+            Quando está triste, Jorge fica
+            <span class="text-5xl inline font-amatic text-azul"
+              >desanimado...</span
+            >
           </p>
         </div>
-        <img src="assets/gol.png" alt="" class="hint__img" />
+        <img src="assets/rain.png" alt="" class="w-[20%]" />
       </header>
     </nav>
     <main class="flex flex-col justify-center items-center gap-5">
       <h2 class="font-amatic font-bold text-4xl text-gray-700">
-        Monte o sorriso de Bernardo!
+        Vamos ver como está Jorge
       </h2>
       <div class="spaces__container borders w-[1000px] h-[600px]"></div>
       <div>
         <img
           src="assets/dica.png"
           alt=""
-          class="absolute right-32 top-[60%] drop-shadow-xl"
+          class="hint__btn absolute right-32 top-[60%] drop-shadow-xl"
         />
       </div>
       <a
@@ -82,7 +102,7 @@
       >
     </main>
     <aside
-      class="pieces__container flex flex-row flex-nowrap overflow-x-scroll w-[80vw] gap-8"
+      class="pieces__container flex flex-row overflow-x-scroll w-[80vw] gap-8"
     ></aside>
     <footer class=""></footer>
   </body>

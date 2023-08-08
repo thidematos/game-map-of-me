@@ -3,6 +3,7 @@ class Puzzle {
   spaces;
   pieces;
   rightMoves = 0;
+
   constructor(numX, numY, imgPath) {
     this.piecesContainer = document.querySelector('.pieces__container');
     this.spacesContainer = document.querySelector('.spaces__container');
@@ -12,6 +13,11 @@ class Puzzle {
 
     this.#handleSpaceEvents(this.spaces);
     this.#handlePieceEvents();
+
+    const hintBtn = document.querySelector('.hint__btn');
+    hintBtn.addEventListener('click', () => {
+      this.#showModal(true);
+    });
   }
 
   //Helpers
@@ -83,13 +89,13 @@ class Puzzle {
       //Hide the Pieces Container
       piecesContainer.classList.add('hidden');
 
-      this.#showVictoryModal();
+      this.#showModal();
     }
   }
 
-  #showVictoryModal() {
+  #showModal(hint = false) {
     const modal = document.querySelector('.modal');
-    this.#settleModalCover();
+    const modalCover = this.#settleModalCover();
 
     modal.classList.remove('hidden');
 
@@ -97,6 +103,44 @@ class Puzzle {
       modal.style.opacity = 1;
       modal.classList.add('flex');
     }, 100);
+
+    this.#alternateModalContent(modal, hint);
+
+    if (hint) {
+      this.#timerForHint(modal, modalCover);
+    }
+  }
+
+  #timerForHint(modal, modalCover) {
+    const progress = document.querySelector('#progressBar');
+    progress.value = 0;
+    let intervalID = setInterval(() => {
+      progress.value += 4;
+      console.log(document.querySelector('#progressBar').value);
+    }, 111);
+    setTimeout(() => {
+      modal.classList.add('hidden');
+      modalCover.classList.add('hidden');
+      clearInterval(intervalID);
+    }, 3000);
+  }
+
+  #alternateModalContent(modal, hint) {
+    const childrens = [...modal.children];
+    if (hint) {
+      childrens.forEach((child) => {
+        child.classList.add('hidden');
+      });
+      modal.lastElementChild.classList.remove('hidden');
+      modal.lastElementChild.classList.add('flex');
+    } else {
+      childrens.forEach((child) => {
+        child.classList.remove('hidden');
+      });
+
+      modal.lastElementChild.classList.add('hidden');
+      modal.lastElementChild.classList.remove('flex');
+    }
   }
 
   #settleModalCover() {
@@ -106,6 +150,8 @@ class Puzzle {
     modalCover.style.width = getComputedStyle(body).width;
     modalCover.style.height = getComputedStyle(body).height;
     modalCover.classList.remove('hidden');
+
+    return modalCover;
   }
 
   #hightlightAvaliableSpaces(spaces, status) {
