@@ -634,6 +634,10 @@ video {
   height: 100%;
 }
 
+.h-1\/2{
+  height: 50%;
+}
+
 .min-h-\[50vh\]{
   min-height: 50vh;
 }
@@ -684,6 +688,10 @@ video {
 
 .w-screen{
   width: 100vw;
+}
+
+.w-1\/4{
+  width: 25%;
 }
 
 .flex-row{
@@ -774,6 +782,11 @@ video {
 .border-gray-600{
   --tw-border-opacity: 1;
   border-color: rgb(75 85 99 / var(--tw-border-opacity));
+}
+
+.border-orange-300{
+  --tw-border-opacity: 1;
+  border-color: rgb(253 186 116 / var(--tw-border-opacity));
 }
 
 .bg-azulClaro{
