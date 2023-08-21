@@ -4,8 +4,11 @@ import loginView from './Views/loginView.js';
 
 const controlLogin = function () {
   const [email, password] = loginView.getInputValues();
+
   const data = model.approveLogin(email, password);
-  if (!data.isLogged) loginView.renderError();
+
+  if (!model.state.isLogged) loginView.renderError();
+  console.log(model.state);
 };
 
 const init = function () {

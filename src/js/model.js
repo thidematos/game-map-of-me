@@ -1,6 +1,6 @@
-import { USER } from './config';
+import { USER } from './config.js';
 
-const state = {
+export const state = {
   isLogged: false,
   currentUser: {
     name: '',
@@ -16,6 +16,7 @@ export const approveLogin = function (inputEmail, inputPassword) {
     state.currentUser.id = USER.id;
 
     state.isLogged = true;
+
     return state;
   }
   if (inputEmail !== USER.user || inputPassword === USER.password) {

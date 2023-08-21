@@ -1,5 +1,3 @@
-import logo from 'url:../assets/logo300.png';
-
 export const navHTML = `
 <nav
 class="h-[10vh] flex flex-row justify-center items-center bg-azulEscuro shadow-lg"
@@ -27,7 +25,7 @@ class="bg-gray0 w-screen h-[85vh] flex flex-col justify-center items-center"
   class="form w-2/6 min-h-[50vh] bg-brancoAzulado rounded-xl shadow-lg bg-no-repeat bg-contain bg-center flex flex-col justify-center items-center gap-6 p-8"
 >
   <div class="flex flex-row justify-evenly items-center">
-    <img src="${logo}" alt="" class="w-[40%]" />
+    <img src="../assets/logo300.png" alt="" class="w-[40%]" />
     <div class="flex flex-col justify-center items-center">
       <h2 class="font-jakarta text-xl text-gray-700">
         Vamos começar a nossa

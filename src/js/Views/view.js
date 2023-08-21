@@ -1,4 +1,4 @@
-import * as components from '../componentsLogin';
+import * as components from '../componentsLogin.js';
 
 class View {
   _data = '';

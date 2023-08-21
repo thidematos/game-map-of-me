@@ -1,5 +1,5 @@
-import View from './view';
-import * as components from '../componentsLogin';
+import View from './view.js';
+import * as components from '../componentsLogin.js';
 
 class LoginPage extends View {
   _parentElement = document.querySelector('.form');
