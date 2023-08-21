@@ -10,6 +10,7 @@ module.exports = {
         azulEscuro: '#228be6',
         laranja: '#ff922b',
         gray0: '#f8f9fa',
+        map: '#f2f4e6',
       },
       fontFamily: {
         jakarta: 'Plus Jakarta Sans',

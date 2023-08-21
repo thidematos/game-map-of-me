@@ -3,6 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ------------------ LOGIN VIEW ----------------- */
+
 .list__item {
   @apply hover:bg-gray-50 hover:text-orange-400 rounded-md hover:drop-shadow-md hover:shadow-md cursor-pointer px-4 py-2 duration-100;
 }
@@ -11,6 +13,12 @@
   @apply bg-gray-50 text-orange-400 drop-shadow-md shadow-md;
 }
 
+/* ------------------ MAP VIEW ----------------- */
+.aside__container {
+  @apply flex flex-col justify-center items-center gap-4 bg-brancoAzulado p-8 rounded-xl shadow-md border border-solid border-orange-400 text-gray-700 cursor-pointer h-[40vh] w-[17vw] hover:bg-orange-300 hover:text-gray-50 duration-100;
+}
+
+/* ------------------ GAME VIEW ----------------- */
 .borders {
   @apply border-orange-400 border-solid border border-b-0;
 }
