@@ -1,18 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{html,js}'],
+  content: ['./src/**/*.{html,js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
-        brancoAzulado: '#defcf9',
+        brancoAzulado: '#d0ebff',
         azulClaro: '#85cdfd',
         azul: '#3c84ab',
-        azulEscuro: '#362fd9',
-        laranja: '#f76015',
+        azulEscuro: '#228be6',
+        laranja: '#ff922b',
+        gray0: '#f8f9fa',
       },
       fontFamily: {
         jakarta: 'Plus Jakarta Sans',
         amatic: 'Amatic SC',
+      },
+      backgroundImage: {
+        logo: "url('../src/assets/backgroundLogo.png')",
       },
     },
   },

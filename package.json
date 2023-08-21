@@ -1,6 +1,31 @@
 {
   "dependencies": {
-    "overlayscrollbars": "^2.2.1",
-    "smooth-scrollbar": "^8.8.4"
+    "generate-unique-id": "^2.0.3",
+    "parcel": "^2.9.3",
+    "validator": "^13.11.0"
+  },
+  "name": "game-map-of-me",
+  "description": "Game Map of Me",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "plugins": {
+    "tailwindcss": {}
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thidematos/game-map-of-me.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thidematos/game-map-of-me/issues"
+  },
+  "homepage": "https://github.com/thidematos/game-map-of-me#readme",
+  "devDependencies": {
+    "postcss": "^8.4.28",
+    "tailwindcss": "^3.3.3"
   }
 }
