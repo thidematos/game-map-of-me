@@ -3,6 +3,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* -------------------- GENERAL ------------------ */
+.text-strong {
+  @apply text-orange-500 font-bold;
+}
+
+.btn__hash {
+  @apply cursor-pointer;
+}
+
 /* ------------------ LOGIN VIEW ----------------- */
 
 .list__item {
@@ -15,7 +24,23 @@
 
 /* ------------------ MAP VIEW ----------------- */
 .aside__container {
-  @apply flex flex-col justify-center items-center gap-4 bg-brancoAzulado p-8 rounded-xl shadow-md border border-solid border-orange-400 text-gray-700 cursor-pointer h-[40vh] w-[17vw] hover:bg-orange-300 hover:text-gray-50 duration-100;
+  @apply flex flex-col justify-center items-center gap-4 bg-brancoAzulado p-8 rounded-xl shadow-md border border-solid border-orange-400 text-gray-700 cursor-pointer hover:bg-orange-300 hover:text-gray-50 duration-100;
+}
+
+.aside__text {
+  @apply font-amatic text-4xl underline underline-offset-8 font-bold text-center;
+}
+
+.map__piece {
+  @apply w-1/4 h-full;
+}
+
+.map__piece-discovered {
+  @apply shadow-xl cursor-pointer;
+}
+
+.map__piece-undiscovered {
+  @apply blur-[0.8px];
 }
 
 /* ------------------ GAME VIEW ----------------- */

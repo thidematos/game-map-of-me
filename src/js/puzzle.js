@@ -4,6 +4,19 @@ class Puzzle {
   pieces;
   rightMoves = 0;
 
+  stopperTimerID;
+  stopperFocusTimerID;
+  focusPlaceHolder = 0;
+
+  data;
+
+  results = {
+    completeTime: 0,
+    wrongMoves: 0,
+    focusTime: 0,
+  };
+  puzzleID;
+
   constructor(numX, numY, imgPath) {
     this.piecesContainer = document.querySelector('.pieces__container');
     this.spacesContainer = document.querySelector('.spaces__container');
@@ -18,9 +31,58 @@ class Puzzle {
     hintBtn.addEventListener('click', () => {
       this.#showModal(true);
     });
+
+    this.stopperTimerID = this.#trackCompleteDuration();
+
+    this.#listenForCustomEvent();
   }
 
   //Helpers
+  #createDOMEvent() {
+    const event = new CustomEvent('victory', {
+      detail: {
+        data: this.results,
+        id: this.puzzleID,
+      },
+    });
+    window.dispatchEvent(event);
+  }
+
+  #listenForCustomEvent() {
+    window.addEventListener('victory', (event) => {
+      this.data = event.detail;
+      console.log(event);
+    });
+  }
+
+  #trackCompleteDuration() {
+    let seconds = 0;
+    const stopperTimer = setInterval(() => {
+      seconds++;
+      console.log(seconds);
+      this.results.completeTime = seconds;
+    }, 1000);
+
+    return stopperTimer;
+  }
+
+  #stopperTimerDuration(timerID) {
+    clearInterval(timerID);
+  }
+
+  #verifyWin(piecesContainer) {
+    if (this.pieces.length === this.rightMoves) {
+      //Hide the Pieces Container
+      piecesContainer.classList.add('hidden');
+
+      this.#stopperTimerDuration(this.stopperTimerID);
+
+      this.#createDOMEvent(this.results.completeTime);
+
+      this.#showModal();
+    }
+  }
+
   #calculateSpacesSize(spacesContainer, numX, numY) {
     const height = Number.parseInt(getComputedStyle(spacesContainer).height);
     const width = Number.parseInt(getComputedStyle(spacesContainer).width);
@@ -82,15 +144,6 @@ class Puzzle {
     this.elDragged = null;
     //Scored!
     this.rightMoves++;
-  }
-
-  #verifyWin(piecesContainer) {
-    if (this.pieces.length === this.rightMoves) {
-      //Hide the Pieces Container
-      piecesContainer.classList.add('hidden');
-
-      this.#showModal();
-    }
   }
 
   #showModal(hint = false) {
@@ -212,6 +265,7 @@ class Puzzle {
       //Verifies if the game is won
       this.#verifyWin(this.piecesContainer);
     } else {
+      this.results.wrongMoves++;
       if (spaceTarget.dataset.completed) return;
       spaceTarget.src = 'assets/transparent.png';
     }
@@ -226,6 +280,11 @@ class Puzzle {
 
     //Hightlight the avaliable spaces
     this.#hightlightAvaliableSpaces(this.spaces, true);
+
+    //Handling the Focus Time
+    this.stopperFocusTimerID = setInterval(() => {
+      this.focusPlaceHolder++;
+    }, 1);
   }
 
   //Internals API Methods
@@ -291,6 +350,10 @@ class Puzzle {
 
       //Handling the Drag End Event
       piece.addEventListener('dragend', (event) => {
+        //Att Focus Time
+        clearInterval(this.stopperFocusTimerID);
+        this.results.focusTime += this.focusPlaceHolder / 1000;
+
         event.target.classList.remove('is-dragging');
         this.#hightlightAvaliableSpaces(this.spaces, false);
       });
@@ -298,5 +361,6 @@ class Puzzle {
   }
 }
 
+export default Puzzle;
 //Estrutura básica do HTML
 //spaces container 1000 x 600px

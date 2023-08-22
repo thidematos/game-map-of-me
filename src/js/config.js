@@ -1,3 +1,8 @@
+import loginView from './Views/loginView.js';
+import mapView from './Views/mapView.js';
+import infoView from './Views/infoView.js';
+import mapOneView from './Views/mapOneView.js';
+
 export const USER = {
   user: 'raizer50@gmail.com',
   password: '@Hiva1111',
@@ -6,3 +11,19 @@ export const USER = {
 };
 
 export const BODY = document.querySelector('body');
+
+export const HASHS = [
+  'login',
+  'adventure-map',
+  'info',
+  'mapOne',
+  'mapTwo',
+  'mapThree',
+  'mapFour',
+  'mapFive',
+  'mapSix',
+  'mapSeven',
+  'mapEight',
+];
+
+export const VIEWS = [loginView, mapView, infoView, mapOneView];
