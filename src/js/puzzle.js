@@ -4,17 +4,24 @@ class Puzzle {
   pieces;
   rightMoves = 0;
 
+  //Stoppers Timers ID`s
   stopperTimerID;
   stopperFocusTimerID;
+
+  //To Keep Track of the Focus Time.
   focusPlaceHolder = 0;
 
+  //Data of the Metrics
   data;
 
+  //Metrics
   results = {
     completeTime: 0,
     wrongMoves: 0,
     focusTime: 0,
   };
+
+  //PuzzleID === HASH
   puzzleID;
 
   constructor(numX, numY, imgPath) {
@@ -39,6 +46,7 @@ class Puzzle {
 
   //Helpers
   #createDOMEvent() {
+    //Creating a CUSTOM EVENT OF VICTORY!
     const event = new CustomEvent('victory', {
       detail: {
         data: this.results,
