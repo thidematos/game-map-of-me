@@ -2,6 +2,9 @@ import loginView from './Views/loginView.js';
 import mapView from './Views/mapView.js';
 import infoView from './Views/infoView.js';
 import mapOneView from './Views/mapOneView.js';
+import mapTwoView from './Views/mapTwoView.js';
+import mapThreeView from './Views/mapThreeView.js';
+import mapFourView from './Views/mapFourView.js';
 
 export const USER = {
   user: 'raizer50@gmail.com',
@@ -26,4 +29,12 @@ export const HASHS = [
   'mapEight',
 ];
 
-export const VIEWS = [loginView, mapView, infoView, mapOneView];
+export const VIEWS = [
+  loginView,
+  mapView,
+  infoView,
+  mapOneView,
+  mapTwoView,
+  mapThreeView,
+  mapFourView,
+];

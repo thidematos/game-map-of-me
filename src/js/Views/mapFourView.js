@@ -1,7 +1,7 @@
 import View from './view.js';
 import Puzzle from '../puzzle.js';
 
-class levelOneView extends View {
+class levelFourView extends View {
   constructor() {
     super();
   }
@@ -12,14 +12,13 @@ class levelOneView extends View {
               <div
                 class="modal hidden bg-gray-100 w-[50vw] h-[50vh] absolute z-[9999] rounded-lg shadow-lg flex-row justify-center items-center p-10"
               >
-                <img src="assets/end-11.png" alt="" class="w-[40%]" />
+                <img src="assets/end-3.png" alt="" class="w-[40%]" />
                 <div class="flex flex-col justify-evenly items-center w-1/2 h-full">
                   <h1 class="font-amatic text-5xl text-orange-300 font-bold">
-                    Sorriso é felicidade
+                    Desafios fazem parte da jornada!
                   </h1>
                   <p class="text-lg font-jakarta text-gray-700 text-center">
-                    ${data.currentUser.name} nos mostrou que, quando estamos
-                    felizes, damos um sorriso bem bonito!
+                    ${data.currentUser.name} nos mostrou que, às vezes, o desconhecido pode nos deixar assustados...
                   </p>
                   <a
                     data-hash="adventure-map"
@@ -32,7 +31,7 @@ class levelOneView extends View {
                   >
                 </div>
                 <div class="hidden flex-col justify-center items-center gap-3">
-                  <img src="assets/puzzle-map-1.png" class="w-[50%] borders" alt="" />
+                  <img src="assets/puzzle-map-3.png" class="w-[50%] borders" alt="" />
                   <progress
                     value="0"
                     max="100"
@@ -43,37 +42,36 @@ class levelOneView extends View {
               </div>
               <div class="modal__cover hidden absolute z-[9998]"></div>
               <nav class="w-screen p-8 flex flex-row justify-center items-center gap-8">
-                <div class="flex flex-row justify-center items-center">
+                <div class="flex flex-row justify-center items-center w-[30%]">
                   <img src="assets/logo300.png" alt="" class="w-[30%]" />
                   <h1 class="font-amatic text-7xl">The Map of Me</h1>
                 </div>
                 <header
-                  class="hint__container flex flex-row justify-center items-center gap-6"
+                  class="hint__container flex flex-row justify-center items-center gap-6 w-[70%]"
                 >
                   <div
                     class="hint__wrapper bg-brancoAzulado p-2 flex flex-col justify-center items-center gap-2 rounded-lg shadow-lg text-gray-900"
                   >
                     <img src="" alt="" />
                     <h3 class="hint__title font-amatic text-5xl">
-                      ${data.currentUser.name} iniciou sua jornada!
+                      ${data.currentUser.name} !
                     </h3>
                     <p class="hint__description text-xl text-center">
-                      ${data.currentUser.name} está sorridente! Pela primeira vez,
-                      ele decide se aventurar pela floresta.
+                   Assim que ${data.currentUser.name} adentrou mais profundamente na floresta, a atmosfera começou a ficar sombria e misteriosa. ${data.currentUser.name} sentiu um frio na espinha e um pouco de medo.
                       ${data.currentUser.name} está
-                      <span class="hint--strong text-xl">feliz!</span>
+                      <span class="hint--strong text-xl">assustado!</span>
                     </p>
                     <p class="hint__keyword text-xl flex flex-row items-center gap-2">
-                      Quando está feliz, ${data.currentUser.name} gosta de
-                      <span class="hint--strong">sorrir!</span>
+                      Quando está assustado, ${data.currentUser.name} fica 
+                      <span class="hint--strong">ansioso...</span>
                     </p>
                   </div>
-                  <img src="assets/logout.png" alt="" class="hint__img" />
+                  <img src="assets/dark-night.png" alt="" class="hint__img" />
                 </header>
               </nav>
               <main class="flex flex-col justify-center items-center gap-5">
                 <h2 class="font-amatic font-bold text-4xl text-gray-700">
-                  Monte o sorriso de ${data.currentUser.name}!
+                  Mostre o caminho para ${data.currentUser.name}!
                 </h2>
                 <div class="spaces__container borders w-[1000px] h-[600px]"></div>
                 <div>
@@ -107,9 +105,9 @@ class levelOneView extends View {
   }
 
   startPuzzle() {
-    this.app = new Puzzle(3, 2, 'piece-puzzle');
-    this.app.puzzleID = 'mapOne';
+    this.app = new Puzzle(4, 4, 'piece-puzzleFour');
+    this.app.puzzleID = 'mapFour';
   }
 }
 
-export default new levelOneView();
+export default new levelFourView();

@@ -18,6 +18,9 @@ class View {
         const target = event.target.closest('.btn__hash');
         hash = target.dataset.hash;
         console.log(hash);
+        [this.app?.stopperFocusTimerID, this.app?.stopperTimerID].forEach(
+          (stopper) => clearInterval(stopper)
+        );
         handler(hash);
       });
     });
