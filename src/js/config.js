@@ -5,6 +5,10 @@ import mapOneView from './Views/mapOneView.js';
 import mapTwoView from './Views/mapTwoView.js';
 import mapThreeView from './Views/mapThreeView.js';
 import mapFourView from './Views/mapFourView.js';
+import mapFiveView from './Views/mapFiveView.js';
+import mapSixView from './Views/mapSixView.js';
+import mapSevenView from './Views/mapSevenView.js';
+import mapEightView from './Views/mapEightView.js';
 
 export const USER = {
   user: 'raizer50@gmail.com',
@@ -37,4 +41,8 @@ export const VIEWS = [
   mapTwoView,
   mapThreeView,
   mapFourView,
+  mapFiveView,
+  mapSixView,
+  mapSevenView,
+  mapEightView,
 ];

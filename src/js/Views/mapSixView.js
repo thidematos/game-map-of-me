@@ -1,7 +1,7 @@
 import View from './view.js';
 import Puzzle from '../puzzle.js';
 
-class levelFourView extends View {
+class levelSixView extends View {
   constructor() {
     super();
   }
@@ -12,13 +12,16 @@ class levelFourView extends View {
               <div
                 class="modal hidden bg-gray-100 w-[50vw] h-[50vh] absolute z-[9999] rounded-lg shadow-lg flex-row justify-center items-center p-10"
               >
-                <img src="assets/end-4.png" alt="" class="w-[40%]" />
+                <img src="assets/end-6.png" alt="" class="w-[40%]" />
                 <div class="flex flex-col justify-evenly items-center w-1/2 h-full">
                   <h1 class="font-amatic text-5xl text-orange-300 font-bold">
-                  Juntos de nossos amigos, podemos enfrentar qualquer desafio!
+                  Um simples ato de bondade podia fazer toda a diferença!
                   </h1>
                   <p class="text-lg font-jakarta text-gray-700 text-center">
-                     Max  com latidos animados e Milo, pulando de galho em galho, deixaram ${data.currentUser.name} confiante novamente! Juntos, os três amigos encontraram um caminho pela floresta.
+                      Pouco tempo depois, em uma área aberta, ${data.currentUser.name} achou a mamãe Urso! Ela estava com o Sr. Tamanduá, em um acampamento, chamando por seu filhote... O filhote correu alegremente para sua mãe, e ${data.currentUser.name} pôde ver o alívio e a alegria nos olhos da Sra. Urso.
+                  </p>
+                  <p class="text-lg font-jakarta text-gray-700 text-center">
+                    ${data.currentUser.name} se colocou no lugar do filhote Urso. Por isso, o reencontro também deixou ${data.currentUser.name} emocionado. Foi uma sensação de alegria e carinho muito grande!
                   </p>
                   <a
                     data-hash="adventure-map"
@@ -31,7 +34,7 @@ class levelFourView extends View {
                   >
                 </div>
                 <div class="hidden flex-col justify-center items-center gap-3">
-                  <img src="assets/puzzle-map-4.png" class="w-[50%] borders" alt="" />
+                  <img src="assets/puzzle-map-6.png" class="w-[50%] borders" alt="" />
                   <progress
                     value="0"
                     max="100"
@@ -54,24 +57,24 @@ class levelFourView extends View {
                   >
                     <img src="" alt="" />
                     <h3 class="hint__title font-amatic text-5xl">
-                      Amizade e coragem!
+                      A mamãe urso e o Sr. Tamanduá.
                     </h3>
                     <p class="hint__description text-xl text-center">
-                   Quando ${data.currentUser.name} achou que estava perdido na floresta, assustado, seus amigos Max, o Cachorro, e Milo, o Macaco, apareceram! Junto aos seus amigos, ${data.currentUser.name} se sentiu seguro.
-                      ${data.currentUser.name} está
-                      <span class="hint--strong text-xl">confiante!</span>
+                    Enquanto o filhote de urso olhava triste à sua volta, ${data.currentUser.name} percebeu que ele estava em busca de sua mãe. ${data.currentUser.name} imaginou como seria se ela mesma estivesse perdida e confusa, procurando por alguém querido.
+                      ${data.currentUser.name} sentiu 
+                      <span class="hint--strong text-xl">compaixão</span> pelo filhote urso!!
                     </p>
                     <p class="hint__keyword text-xl flex flex-row items-center gap-2">
-                      Quando está seguro e confiante, ${data.currentUser.name} sente a 
-                      <span class="hint--strong">coragem!</span>
+                      Diante da dificuldade do filhote Urso, ${data.currentUser.name} decidiu ajudá-lo, em um gesto de 
+                      <span class="hint--strong">empatia!</span>
                     </p>
                   </div>
-                  <img src="assets/brave.png" alt="" class="hint__img" />
+                  <img src="assets/bear-family.png" alt="" class="hint__img" />
                 </header>
               </nav>
               <main class="flex flex-col justify-center items-center gap-5">
                 <h2 class="font-amatic font-bold text-4xl text-gray-700">
-                  Encontre o caminho com ${data.currentUser.name} e seus amigos!
+                  Veja o encontro de ${data.currentUser.name} com o urso!
                 </h2>
                 <div class="spaces__container borders w-[1000px] h-[600px]"></div>
                 <div>
@@ -105,9 +108,9 @@ class levelFourView extends View {
   }
 
   startPuzzle() {
-    this.app = new Puzzle(4, 4, 'piece-puzzleFour');
-    this.app.puzzleID = 'mapFour';
+    this.app = new Puzzle(5, 4, 'piece-puzzleSix');
+    this.app.puzzleID = 'mapSix';
   }
 }
 
-export default new levelFourView();
+export default new levelSixView();

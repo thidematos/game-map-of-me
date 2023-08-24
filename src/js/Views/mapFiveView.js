@@ -1,7 +1,7 @@
 import View from './view.js';
 import Puzzle from '../puzzle.js';
 
-class levelFourView extends View {
+class levelFiveView extends View {
   constructor() {
     super();
   }
@@ -12,13 +12,16 @@ class levelFourView extends View {
               <div
                 class="modal hidden bg-gray-100 w-[50vw] h-[50vh] absolute z-[9999] rounded-lg shadow-lg flex-row justify-center items-center p-10"
               >
-                <img src="assets/end-4.png" alt="" class="w-[40%]" />
+                <img src="assets/end-5.png" alt="" class="w-[40%]" />
                 <div class="flex flex-col justify-evenly items-center w-1/2 h-full">
                   <h1 class="font-amatic text-5xl text-orange-300 font-bold">
                   Juntos de nossos amigos, podemos enfrentar qualquer desafio!
                   </h1>
                   <p class="text-lg font-jakarta text-gray-700 text-center">
-                     Max  com latidos animados e Milo, pulando de galho em galho, deixaram ${data.currentUser.name} confiante novamente! Juntos, os três amigos encontraram um caminho pela floresta.
+                      ${data.currentUser.name} deu uma risada tímida, percebendo que o filhote estava apenas curioso, e não ameaçador. Ele se sentiu aliviado e riu de toda a situação!
+                  </p>
+                  <p class="text-lg font-jakarta text-gray-700 text-center">
+                      Afinal, o ursinho estava apenas procurando sua mamãe!
                   </p>
                   <a
                     data-hash="adventure-map"
@@ -31,7 +34,7 @@ class levelFourView extends View {
                   >
                 </div>
                 <div class="hidden flex-col justify-center items-center gap-3">
-                  <img src="assets/puzzle-map-4.png" class="w-[50%] borders" alt="" />
+                  <img src="assets/puzzle-map-5.png" class="w-[50%] borders" alt="" />
                   <progress
                     value="0"
                     max="100"
@@ -54,24 +57,24 @@ class levelFourView extends View {
                   >
                     <img src="" alt="" />
                     <h3 class="hint__title font-amatic text-5xl">
-                      Amizade e coragem!
+                      O susto do urso!
                     </h3>
                     <p class="hint__description text-xl text-center">
-                   Quando ${data.currentUser.name} achou que estava perdido na floresta, assustado, seus amigos Max, o Cachorro, e Milo, o Macaco, apareceram! Junto aos seus amigos, ${data.currentUser.name} se sentiu seguro.
-                      ${data.currentUser.name} está
-                      <span class="hint--strong text-xl">confiante!</span>
+                    ${data.currentUser.name} se viu diante de uma cena inesperada: um adorável filhote de urso brincando entre as árvores. A surpresa rapidamente se transformou em susto quando o filhote olhou em sua direção e soltou um pequeno rugido! Com o susto, ${data.currentUser.name} desequilibrou e caiu no rio!
+                      ${data.currentUser.name} ficou 
+                      <span class="hint--strong text-xl">envergonhado!</span>
                     </p>
                     <p class="hint__keyword text-xl flex flex-row items-center gap-2">
-                      Quando está seguro e confiante, ${data.currentUser.name} sente a 
-                      <span class="hint--strong">coragem!</span>
+                      Em uma situação atrapalhada, ${data.currentUser.name} ficou
+                      <span class="hint--strong">envergonhado!</span>
                     </p>
                   </div>
-                  <img src="assets/brave.png" alt="" class="hint__img" />
+                  <img src="assets/tree.png" alt="" class="hint__img" />
                 </header>
               </nav>
               <main class="flex flex-col justify-center items-center gap-5">
                 <h2 class="font-amatic font-bold text-4xl text-gray-700">
-                  Encontre o caminho com ${data.currentUser.name} e seus amigos!
+                  Veja o encontro de ${data.currentUser.name} com o urso!
                 </h2>
                 <div class="spaces__container borders w-[1000px] h-[600px]"></div>
                 <div>
@@ -105,9 +108,9 @@ class levelFourView extends View {
   }
 
   startPuzzle() {
-    this.app = new Puzzle(4, 4, 'piece-puzzleFour');
-    this.app.puzzleID = 'mapFour';
+    this.app = new Puzzle(4, 4, 'piece-puzzleFive');
+    this.app.puzzleID = 'mapFive';
   }
 }
 
-export default new levelFourView();
+export default new levelFiveView();
