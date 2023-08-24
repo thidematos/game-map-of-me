@@ -10,18 +10,18 @@ class levelEightView extends View {
     return `
         <main class="bg-gray-50 flex flex-col justify-center items-center gap-10">
               <div
-                class="modal hidden bg-gray-100 w-[60vw] h-[60vh] absolute z-[9999] rounded-lg shadow-lg flex-row justify-center items-center p-10"
+                class="modal hidden bg-gray-100 w-[70vw] h-[70vh] absolute z-[9999] rounded-lg shadow-lg flex-row justify-center items-center p-10"
               >
-                <img src="assets/end-7.png" alt="" class="w-[40%]" />
+                <img src="assets/end-8.png" alt="" class="w-[40%]" />
                 <div class="flex flex-col justify-evenly items-center w-1/2 h-full">
                   <h1 class="font-amatic text-5xl text-orange-300 font-bold">
-                    Sempre há uma esperança!
+                    O tesouro sempre esteve dentro de nós!
                   </h1>
-                  <p class="text-lg font-jakarta text-gray-700 text-center">
-                      Quando estamos com <span class="hint--strong text-xl">medo</span> e cansados, é normal pensarmos em desistir. A <span class="hint--strong text-xl">esperança</span> pode diminuir...
+                  <p class="text-lg font-jakarta text-gray-700 ">
+                    Por fim, o pai de ${data.currentUser.name} finalmente lhe contou o segredo da floresta. O verdadeiro tesouro que a floresta guarda sempre esteve na <span class="hint--strong-minor">aventura</span>, nas experiências e nas <span class="hint--strong-minor">emoções</span> que dividiram nessa jornada... 
                   </p>
-                  <p class="text-lg font-jakarta text-gray-700 text-center">
-                    O Sr. Panda e Pandinha disseram para ${data.currentUser.name} que o segredo da floresta era seguir sempre em frente. A floresta recompensa aqueles que não desistem! Estas palavras trouxeram a  <span class="hint--strong text-xl">inspiração</span> e a esperança que ${data.currentUser.name} precisava para continuar...               
+                  <p class="text-lg font-jakarta text-gray-700 ">
+                    Enquanto o sol se despedia, pintando o céu com tons dourados e rosados, ${data.currentUser.name} percebeu que o tesouro que tanto buscava estava diante dele o tempo todo, em sua jornada inesquecível pelo seu <span class="hint--strong-minor ">Map of Me!</span>.  
                   </p>
                   <a
                     data-hash="adventure-map"
@@ -34,7 +34,7 @@ class levelEightView extends View {
                   >
                 </div>
                 <div class="hidden flex-col justify-center items-center gap-3">
-                  <img src="assets/puzzle-map-6.png" class="w-[50%] borders" alt="" />
+                  <img src="assets/puzzle-map-8.png" class="w-[50%] borders" alt="" />
                   <progress
                     value="0"
                     max="100"
@@ -57,21 +57,21 @@ class levelEightView extends View {
                   >
                     <img src="" alt="" />
                     <h3 class="hint__title font-amatic text-5xl">
-                      Uma floresta sem fim?
+                      A aventura chega ao fim... 
                     </h3>
                     <p class="hint__description text-xl text-center">
-                      ${data.currentUser.name} continuava em sua aventura pela floresta... Como não achou nenhum caminho que parecesse levar para o tesouro escondido, ou até mesmo para fora da floresta, nosso explorador ficou com <span class="hint--strong text-xl">medo</span>. ${data.currentUser.name} estava perdendo a <span class="hint--strong text-xl">esperança</span>
+                      Quando o sol começava a se pôr no horizonte, ${data.currentUser.name} avistou uma figura familiar entre as árvores. Emocionado, ${data.currentUser.name} avistou seu pai, sorrindo orgulhosamente para ele. Seu pai sempre esteve ao seu lado, apoiando ${data.currentUser.name} de longe, e deixando ele explorar a floresta e descobrir as <span class="hint--strong text-xl">riqueza das emoções</span> por conta própria. 
                     </p>
                     <p class="hint__keyword text-xl flex flex-row items-center gap-2">
-                        Prestes a desistir, ${data.currentUser.name}, Milo e Max encontraram o Sr. Panda e Pandinha! Panda e Pandinha disseram o segredo da flotesta para ${data.currentUser.name}... 
+                      Os novos amigos que ${data.currentUser.name} havia feito durante sua aventura apareceram um por um, trazendo consigo as histórias e laços que tinham formado. Cada um trazia uma lembrança especial da jornada...
                     </p>
                   </div>
-                  <img src="assets/panda.png" alt="" class="hint__img" />
+                  <img src="assets/father.png" alt="" class="hint__img" />
                 </header>
               </nav>
               <main class="flex flex-col justify-center items-center gap-5">
                 <h2 class="font-amatic font-bold text-4xl text-gray-700">
-                  O que o Sr. Panda e Pandinha disseram para nosso explorador?
+                  Qual será o tesouro que a floresta guardava?
                 </h2>
                 <div class="spaces__container borders w-[1000px] h-[600px]"></div>
                 <div>

@@ -10,17 +10,17 @@ class levelSixView extends View {
     return `
         <main class="bg-gray-50 flex flex-col justify-center items-center gap-10">
               <div
-                class="modal hidden bg-gray-100 w-[50vw] h-[50vh] absolute z-[9999] rounded-lg shadow-lg flex-row justify-center items-center p-10"
+                class="modal hidden bg-gray-100 w-[70vw] h-[70vh] absolute z-[9999] rounded-lg shadow-lg flex-row justify-center items-center p-10"
               >
                 <img src="assets/end-6.png" alt="" class="w-[40%]" />
                 <div class="flex flex-col justify-evenly items-center w-1/2 h-full">
                   <h1 class="font-amatic text-5xl text-orange-300 font-bold">
                   Um simples ato de bondade podia fazer toda a diferença!
                   </h1>
-                  <p class="text-lg font-jakarta text-gray-700 text-center">
+                  <p class="text-lg font-jakarta text-gray-700">
                       Pouco tempo depois, em uma área aberta, ${data.currentUser.name} achou a mamãe Urso! Ela estava com o Sr. Tamanduá, em um acampamento, chamando por seu filhote... O filhote correu alegremente para sua mãe, e ${data.currentUser.name} pôde ver o alívio e a alegria nos olhos da Sra. Urso.
                   </p>
-                  <p class="text-lg font-jakarta text-gray-700 text-center">
+                  <p class="text-lg font-jakarta text-gray-700">
                     ${data.currentUser.name} se colocou no lugar do filhote Urso. Por isso, o reencontro também deixou ${data.currentUser.name} emocionado. Foi uma sensação de alegria e carinho muito grande!
                   </p>
                   <a

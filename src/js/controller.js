@@ -32,16 +32,12 @@ const controlHashChange = function () {
   currentView.addGetHash(model.changeHash);
 };
 
-const getResultsHandler = function (data) {
-  model.getResults(data);
-};
-
 const init = function () {
   model.changeHash('login');
   instanceView.addHandlerChangeHash(controlHashChange);
   loginView.addHandlerLogin(controlLogin);
   window.addEventListener('victory', (event) => {
-    getResultsHandler(event.detail);
+    model.getResults(event.detail);
   });
 };
 init();

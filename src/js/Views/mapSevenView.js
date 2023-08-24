@@ -17,11 +17,11 @@ class levelSevenView extends View {
                   <h1 class="font-amatic text-5xl text-orange-300 font-bold">
                     Sempre há uma esperança!
                   </h1>
-                  <p class="text-lg font-jakarta text-gray-700 text-center">
-                      Quando estamos com <span class="hint--strong text-xl">medo</span> e cansados, é normal pensarmos em desistir. A <span class="hint--strong text-xl">esperança</span> pode diminuir...
+                  <p class="text-lg font-jakarta text-gray-700 ">
+                      Quando estamos com <span class="hint--strong-minor text-xl">medo</span> e cansados, é normal pensarmos em desistir. A <span class="hint--strong-minor text-xl">esperança</span> pode diminuir...
                   </p>
-                  <p class="text-lg font-jakarta text-gray-700 text-center">
-                    O Sr. Panda e Pandinha disseram para ${data.currentUser.name} que o segredo da floresta era seguir sempre em frente. A floresta recompensa aqueles que não desistem! Estas palavras trouxeram a  <span class="hint--strong text-xl">inspiração</span> e a esperança que ${data.currentUser.name} precisava para continuar...               
+                  <p class="text-lg font-jakarta text-gray-700 ">
+                    O Sr. Panda e Pandinha disseram para ${data.currentUser.name} que o segredo da floresta era seguir sempre em frente. A floresta recompensa aqueles que não desistem! Estas palavras trouxeram a  <span class="hint--strong-minor text-xl">inspiração</span> e a esperança que ${data.currentUser.name} precisava para continuar...               
                   </p>
                   <a
                     data-hash="adventure-map"
@@ -34,7 +34,7 @@ class levelSevenView extends View {
                   >
                 </div>
                 <div class="hidden flex-col justify-center items-center gap-3">
-                  <img src="assets/puzzle-map-6.png" class="w-[50%] borders" alt="" />
+                  <img src="assets/puzzle-map-7.png" class="w-[50%] borders" alt="" />
                   <progress
                     value="0"
                     max="100"

@@ -12,48 +12,56 @@ export const state = {
         focusTime: '',
         wrongMoves: '',
         durationToComplete: '',
+        hints: '',
       },
       mapTwo: {
         completed: false,
         focusTime: '',
         wrongMoves: '',
         durationToComplete: '',
+        hints: '',
       },
       mapThree: {
         completed: false,
         focusTime: '',
         wrongMoves: '',
         durationToComplete: '',
+        hints: '',
       },
       mapFour: {
         completed: false,
         focusTime: '',
         wrongMoves: '',
         durationToComplete: '',
+        hints: '',
       },
       mapFive: {
         completed: false,
         focusTime: '',
         wrongMoves: '',
         durationToComplete: '',
+        hints: '',
       },
       mapSix: {
         completed: false,
         focusTime: '',
         wrongMoves: '',
         durationToComplete: '',
+        hints: '',
       },
       mapSeven: {
         completed: false,
         focusTime: '',
         wrongMoves: '',
         durationToComplete: '',
+        hints: '',
       },
       mapEight: {
         completed: false,
         focusTime: '',
         wrongMoves: '',
         durationToComplete: '',
+        hints: '',
       },
     },
   },
@@ -91,6 +99,7 @@ export const getResults = function (data) {
   );
   state.currentUser.levels[data.id].wrongMoves = data.data.wrongMoves;
   state.currentUser.levels[data.id].durationToComplete = data.data.completeTime;
+  state.currentUser.levels[data.id].hints = data.data.hints;
 
   console.log(state);
 };

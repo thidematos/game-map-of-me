@@ -10,14 +10,14 @@ class levelFourView extends View {
     return `
         <main class="bg-gray-50 flex flex-col justify-center items-center gap-10">
               <div
-                class="modal hidden bg-gray-100 w-[50vw] h-[50vh] absolute z-[9999] rounded-lg shadow-lg flex-row justify-center items-center p-10"
+                class="modal hidden bg-gray-100 w-[70vw] h-[70vh] absolute z-[9999] rounded-lg shadow-lg flex-row justify-center items-center p-10"
               >
                 <img src="assets/end-4.png" alt="" class="w-[40%]" />
                 <div class="flex flex-col justify-evenly items-center w-1/2 h-full">
                   <h1 class="font-amatic text-5xl text-orange-300 font-bold">
                   Juntos de nossos amigos, podemos enfrentar qualquer desafio!
                   </h1>
-                  <p class="text-lg font-jakarta text-gray-700 text-center">
+                  <p class="text-lg font-jakarta text-gray-700">
                      Max  com latidos animados e Milo, pulando de galho em galho, deixaram ${data.currentUser.name} confiante novamente! Juntos, os três amigos encontraram um caminho pela floresta.
                   </p>
                   <a

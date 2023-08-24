@@ -19,6 +19,7 @@ class Puzzle {
     completeTime: 0,
     wrongMoves: 0,
     focusTime: 0,
+    hints: 0,
   };
 
   //PuzzleID === HASH
@@ -59,7 +60,6 @@ class Puzzle {
   #listenForCustomEvent() {
     window.addEventListener('victory', (event) => {
       this.data = event.detail;
-      console.log(event);
     });
   }
 
@@ -169,6 +169,7 @@ class Puzzle {
 
     if (hint) {
       this.#timerForHint(modal, modalCover);
+      this.results.hints++;
     }
   }
 
@@ -177,7 +178,6 @@ class Puzzle {
     progress.value = 0;
     let intervalID = setInterval(() => {
       progress.value += 4;
-      console.log(document.querySelector('#progressBar').value);
     }, 111);
     setTimeout(() => {
       modal.classList.add('hidden');

@@ -10,14 +10,14 @@ class levelOneView extends View {
     return `
         <main class="bg-gray-50 flex flex-col justify-center items-center gap-10">
               <div
-                class="modal hidden bg-gray-100 w-[50vw] h-[50vh] absolute z-[9999] rounded-lg shadow-lg flex-row justify-center items-center p-10"
+                class="modal hidden bg-gray-100 w-[70vw] h-[70vh] absolute z-[9999] rounded-lg shadow-lg flex-row justify-center items-center p-10"
               >
                 <img src="assets/end-11.png" alt="" class="w-[40%]" />
                 <div class="flex flex-col justify-evenly items-center w-1/2 h-full">
                   <h1 class="font-amatic text-5xl text-orange-300 font-bold">
                     Sorriso é felicidade
                   </h1>
-                  <p class="text-lg font-jakarta text-gray-700 text-center">
+                  <p class="text-lg font-jakarta text-gray-700 ">
                     ${data.currentUser.name} nos mostrou que, quando estamos
                     felizes, damos um sorriso bem bonito!
                   </p>

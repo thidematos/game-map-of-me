@@ -659,6 +659,10 @@ video {
   height: 60vh;
 }
 
+.h-\[70vh\]{
+  height: 70vh;
+}
+
 .h-\[85vh\]{
   height: 85vh;
 }
@@ -729,6 +733,10 @@ video {
 
 .w-\[70\%\]{
   width: 70%;
+}
+
+.w-\[70vw\]{
+  width: 70vw;
 }
 
 .w-\[80\%\]{
@@ -1301,6 +1309,15 @@ video {
   font-family: Amatic SC;
   font-size: 3rem;
   line-height: 1;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(249 115 22 / var(--tw-text-opacity));
+}
+
+.hint--strong-minor{
+  font-family: Amatic SC;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(249 115 22 / var(--tw-text-opacity));
