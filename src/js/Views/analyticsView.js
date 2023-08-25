@@ -3,8 +3,8 @@ import View from './view.js';
 class AnalyticsView extends View {
   _canvas;
   chart;
-  _currentChart = 'mapOne';
-  _currentPagination = 'btn__perLevel';
+  _currentChart;
+  _currentPagination;
   constructor() {
     super();
   }
@@ -61,7 +61,7 @@ class AnalyticsView extends View {
       class="flex flex-row justify-evenly items-start w-[90%] bg-brancoAzulado py-16 px-6 rounded-xl shadow-xl"
     >
       <div
-        class="w-[20%] flex flex-col justify-center items-center gap-4 font-jakarta tracking-wide leading-6 indent-5 text-justify bg-gray-50 p-10 rounded-lg shadow-xl"
+        class="w-[20%] flex flex-col justify-center items-center gap-4 tracking-wide leading-6 indent-8 font-serif text-justify bg-gray-50 p-10 rounded-lg shadow-xl drop-shadow-md"
       >
         <p>
           O registro dos detalhes de cada desafio resolvido e emoção
@@ -101,61 +101,117 @@ class AnalyticsView extends View {
           <div
             class="container__btns container__perLevel"
           >
-            <button data-metric="mapOne" class="btn__charts btn__charts-active">
-              <img src="./assets/btnOne.png" alt="" class="w-[50%]" />
-              <h4>Felicidade!</h4>
+            <button data-metric="mapOne" data-metric-type="perLevel" class="btn__charts btn__charts-active">
+              <img src="${
+                data.currentUser.levels.mapOne.completed
+                  ? './assets/btnOne.png'
+                  : './assets/not-found.png'
+              }" alt="" class="w-[50%]" />
+              <h4>${
+                data.currentUser.levels.mapOne.completed
+                  ? 'Felicidade!'
+                  : '? ? ?'
+              }</h4>
             </button>
-            <button data-metric="mapTwo" class="btn__charts">
-              <img src="./assets/btnTwo.png" alt="" class="w-[50%]" />
-              <h4>Admiração!</h4>
+            <button data-metric="mapTwo" data-metric-type="perLevel" class="btn__charts">
+              <img src="${
+                data.currentUser.levels.mapTwo.completed
+                  ? './assets/btnTwo.png'
+                  : './assets/not-found.png'
+              }" alt="" class="w-[50%]" />
+              <h4>${
+                data.currentUser.levels.mapTwo.completed
+                  ? 'Admiração!'
+                  : '? ? ?'
+              }</h4>
             </button>
-            <button data-metric="mapThree" class="btn__charts">
-              <img src="./assets/btnThree.png" alt="" class="w-[50%]" />
-              <h4>Medo!</h4>
+            <button data-metric="mapThree" data-metric-type="perLevel" class="btn__charts">
+              <img src="${
+                data.currentUser.levels.mapThree.completed
+                  ? './assets/btnThree.png'
+                  : './assets/not-found.png'
+              }" alt="" class="w-[50%]" />
+              <h4>${
+                data.currentUser.levels.mapThree.completed ? 'Medo!' : '? ? ?'
+              }</h4>
             </button>
-            <button data-metric="mapFour" class="btn__charts">
-              <img src="./assets/btnFour.png" alt="" class="w-[50%]" />
-              <h4>Coragem!</h4>
+            <button data-metric="mapFour" data-metric-type="perLevel" class="btn__charts">
+              <img src="${
+                data.currentUser.levels.mapFour.completed
+                  ? './assets/btnFour.png'
+                  : './assets/not-found.png'
+              }" alt="" class="w-[50%]" />
+              <h4>${
+                data.currentUser.levels.mapFour.completed ? 'Coragem!' : '? ? ?'
+              }</h4>
             </button>
-            <button data-metric="mapFive" class="btn__charts">
-              <img src="./assets/btnFive.png" alt="" class="w-[50%]" />
-              <h4>Diversão!</h4>
+            <button data-metric="mapFive" data-metric-type="perLevel" class="btn__charts">
+              <img src="${
+                data.currentUser.levels.mapFive.completed
+                  ? './assets/btnFive.png'
+                  : './assets/not-found.png'
+              }" alt="" class="w-[50%]" />
+              <h4>${
+                data.currentUser.levels.mapFive.completed ? 'Diversão' : '? ? ?'
+              }</h4>
             </button>
-            <button data-metric="mapSix" class="btn__charts">
-              <img src="./assets/btnSix.png" alt="" class="w-[50%]" />
-              <h4>Empatia!</h4>
+            <button data-metric="mapSix" data-metric-type="perLevel" class="btn__charts">
+              <img src="${
+                data.currentUser.levels.mapSix.completed
+                  ? './assets/btnSix.png'
+                  : './assets/not-found.png'
+              }" alt="" class="w-[50%]" />
+              <h4>${
+                data.currentUser.levels.mapSix.completed ? 'Empatia' : '? ? ?'
+              }</h4>
             </button>
-            <button data-metric="mapSeven" class="btn__charts">
-              <img src="./assets/btnSeven.png" alt="" class="w-[50%]" />
-              <h4>Esperança!</h4>
+            <button data-metric="mapSeven" data-metric-type="perLevel" class="btn__charts">
+              <img src="${
+                data.currentUser.levels.mapSeven.completed
+                  ? './assets/btnSeven.png'
+                  : './assets/not-found.png'
+              }" alt="" class="w-[50%]" />
+              <h4>${
+                data.currentUser.levels.mapSeven.completed
+                  ? 'Esperança'
+                  : '? ? ?'
+              }</h4>
             </button>
-            <button data-metric="mapEight" class="btn__charts">
-              <img src="./assets/btnEight.png" alt="" class="w-[50%]" />
-              <h4>The Map of Me!</h4>
+            <button data-metric="mapEight" data-metric-type="perLevel" class="btn__charts">
+              <img src="${
+                data.currentUser.levels.mapEight.completed
+                  ? './assets/btnEight.png'
+                  : './assets/not-found.png'
+              }" alt="" class="w-[50%]" />
+              <h4>${
+                data.currentUser.levels.mapEight.completed
+                  ? 'The Map of Me!'
+                  : '? ? ?'
+              }</h4>
             </button>
           </div>
           <div
             class="container__btns container__perMetric" style='display:none'
           >
-            <button data-metric="focusTime"
+            <button data-metric="focusTime" data-metric-type="perMetric"
               class="btn__charts btn__charts-active flex flex-row justify-center items-center gap-3 bg-gray-50 px-3 py-2 rounded-lg"
             >
               <i class="fa-solid fa-arrows-to-circle text-xl"> </i>
               <span class="text-3xl">Foco</span>
             </button>
-            <button data-metric="durationToComplete"
+            <button data-metric="durationToComplete" data-metric-type="perMetric"
               class="btn__charts flex flex-row justify-center items-center gap-3 bg-gray-50 px-3 py-2 rounded-lg"
             >
               <i class="fa-solid fa-stopwatch texl-xl"></i>
               <span class="text-3xl">Montagem</span>
             </button>
-            <button data-metric="hints"
+            <button data-metric="hints" data-metric-type="perMetric"
               class="btn__charts flex flex-row justify-center items-center gap-3 bg-gray-50 px-3 py-2 rounded-lg"
             >
               <i class="fa-solid fa-signs-post texl-xl"></i>
               <span class="text-3xl">Dicas usadas</span>
             </button>
-            <button data-metric="wrongMoves"
+            <button data-metric="wrongMoves" data-metric-type="perMetric"
               class="btn__charts flex flex-row justify-center items-center gap-3 bg-gray-50 px-3 py-2 rounded-lg"
             >
               <i class="fa-solid fa-road-circle-xmark text-xl"></i>
@@ -164,7 +220,7 @@ class AnalyticsView extends View {
           </div>
         </div>
         <div class="chart__container w-[85%]" style="display: none">
-          <canvas id="chart" class="border border-solid border-orange-300">
+          <canvas id="chart" class="border-[2px] border-solid border-orange-300 rounded-lg shadow-xl bg-gray-50">
           </canvas>
         </div>
         <div
@@ -195,6 +251,7 @@ class AnalyticsView extends View {
 
     this._body.insertAdjacentHTML('beforeend', component);
     this._defineCanvas();
+    this._defineInitialCanvas();
     this._startEventListeners();
     this._configChart();
     this.renderBarChart(this._currentChart);
@@ -204,9 +261,21 @@ class AnalyticsView extends View {
     this._canvas = document.querySelector('#chart');
   }
 
-  _configChart() {
+  _defineInitialCanvas() {
+    this._currentChart = 'mapOne';
+    this._currentPagination = 'btn__perLevel';
+  }
+
+  _defineChartContainers() {
+    const chartContainer = document.querySelector('.chart__container');
+    const errorContainer = document.querySelector('.error__container');
+
+    return [chartContainer, errorContainer];
+  }
+
+  _configChart(chartType = 'perLevel') {
     Chart.defaults.font = {
-      size: 14,
+      size: chartType === 'perLevel' ? 14 : 16,
       family: 'Plus Jakarta Sans',
     };
   }
@@ -237,9 +306,11 @@ class AnalyticsView extends View {
 
     this._currentChart = btn.dataset.metric;
 
-    console.log(this._currentChart);
+    const chartType = btn.dataset.metricType;
 
-    this.renderBarChart(this._currentChart);
+    if (chartType === 'perLevel') this.renderBarChart(this._currentChart);
+
+    if (chartType === 'perMetric') this.renderLineChart(this._currentChart);
   }
 
   _changeBtnView(btn) {
@@ -267,6 +338,7 @@ class AnalyticsView extends View {
   _changePaginationView(pagination, btnTarget) {
     const containersBtns = document.querySelectorAll('.container__btns');
     const paginationBtns = document.querySelectorAll('.btn__pagination');
+    const chartsBtns = document.querySelectorAll('.btn__charts');
 
     containersBtns.forEach((container) => {
       container.classList.remove('btn__chart-active');
@@ -276,6 +348,8 @@ class AnalyticsView extends View {
     paginationBtns.forEach((btn) => {
       btn.classList.remove('btn__pagination-active');
     });
+
+    chartsBtns.forEach((btn) => btn.classList.remove('btn__chart-active'));
 
     btnTarget.classList.add('btn__pagination-active');
 
@@ -296,12 +370,17 @@ class AnalyticsView extends View {
     errorContainer.style = '';
   }
 
+  _showCanvas(errorContainer, chartContainer) {
+    errorContainer.style.display = 'none';
+    chartContainer.style = '';
+  }
+
   _clearCanvas(currentChart) {
     const chartContainer = document.querySelector('.chart__container');
 
     chartContainer.innerHTML = '';
 
-    const html = `<canvas id="${currentChart}" class="border border-solid border-orange-300">
+    const html = `<canvas id="${currentChart}" class="border-[2px] border-solid border-orange-300 rounded-lg shadow-xl bg-gray-50">
     </canvas>`;
 
     chartContainer.insertAdjacentHTML('beforeend', html);
@@ -309,17 +388,78 @@ class AnalyticsView extends View {
     this._canvas = document.querySelector(`#${currentChart}`);
   }
 
-  renderBarChart(currentChart) {
-    const chartContainer = document.querySelector('.chart__container');
-    const errorContainer = document.querySelector('.error__container');
+  renderLineChart(currentChart, chartType) {
+    const [chartContainer, errorContainer] = this._defineChartContainers();
+    const dataLevels = this._data.currentUser.levels;
+
+    this._configChart(chartType);
+
+    this._showCanvas(errorContainer, chartContainer);
+
+    this._clearCanvas('perMetric');
+    this._canvas = this._canvas.getContext('2d');
+
+    this.app = new Chart(this._canvas, {
+      type: 'bar',
+      data: {
+        labels: [
+          `${dataLevels.mapOne.completed ? 'Felicidade!' : '???'}`,
+          `${dataLevels.mapTwo.completed ? 'Admiração!' : '???'}`,
+          `${dataLevels.mapThree.completed ? 'Medo!' : '???'}`,
+          `${dataLevels.mapFour.completed ? 'Coragem!' : '???'}`,
+          `${dataLevels.mapFive.completed ? 'Diversão!' : '???'}`,
+          `${dataLevels.mapSix.completed ? 'Empatia!' : '???'}`,
+          `${dataLevels.mapSeven.completed ? 'Esperança!' : '???'}`,
+          `${dataLevels.mapEight.completed ? 'The Map of Me!' : '???'}`,
+        ],
+        datasets: [
+          {
+            label: `Métricas de ${this._data.currentUser.name}`,
+            data: [
+              dataLevels.mapOne.completed ? dataLevels.mapOne[currentChart] : 0,
+              dataLevels.mapTwo.completed ? dataLevels.mapTwo[currentChart] : 0,
+              dataLevels.mapThree.completed
+                ? dataLevels.mapThree[currentChart]
+                : 0,
+              dataLevels.mapFour.completed
+                ? dataLevels.mapFour[currentChart]
+                : 0,
+              dataLevels.mapFive.completed
+                ? dataLevels.mapFive[currentChart]
+                : 0,
+              dataLevels.mapSix.completed ? dataLevels.mapSix[currentChart] : 0,
+              dataLevels.mapSeven.completed
+                ? dataLevels.mapSeven[currentChart]
+                : 0,
+              dataLevels.mapEight.completed
+                ? dataLevels.mapEight[currentChart]
+                : 0,
+            ],
+            backgroundColor: 'rgb(34,139,230)',
+            borderRadius: '8',
+          },
+        ],
+      },
+      options: {
+        layout: {
+          padding: 40,
+        },
+      },
+    });
+  }
+
+  renderBarChart(currentChart, chartType) {
+    const [chartContainer, errorContainer] = this._defineChartContainers();
+
     const rawData = this._data.currentUser.levels[currentChart];
 
     if (!this._isCompleted(rawData)) return this._renderErrorMessage();
 
+    this._configChart(chartType);
+
     this._clearCanvas(currentChart);
 
-    errorContainer.style.display = 'none';
-    chartContainer.style = '';
+    this._showCanvas(errorContainer, chartContainer);
 
     this._canvas = this._canvas.getContext('2d');
     this.app = new Chart(this._canvas, {

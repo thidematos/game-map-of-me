@@ -703,6 +703,10 @@ video {
   width: 20%;
 }
 
+.w-\[25\%\]{
+  width: 25%;
+}
+
 .w-\[30\%\]{
   width: 30%;
 }
@@ -739,16 +743,16 @@ video {
   width: 70vw;
 }
 
-.w-\[75\%\]{
-  width: 75%;
-}
-
 .w-\[80\%\]{
   width: 80%;
 }
 
 .w-\[80vw\]{
   width: 80vw;
+}
+
+.w-\[85\%\]{
+  width: 85%;
 }
 
 .w-\[90\%\]{
@@ -761,14 +765,6 @@ video {
 
 .w-screen{
   width: 100vw;
-}
-
-.w-\[85\%\]{
-  width: 85%;
-}
-
-.w-\[25\%\]{
-  width: 25%;
 }
 
 .max-w-\[18\%\]{
@@ -1051,36 +1047,20 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.py-20{
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-.py-24{
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-
-.py-28{
-  padding-top: 7rem;
-  padding-bottom: 7rem;
-}
-
-.py-32{
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-}
-
 .pr-8{
   padding-right: 2rem;
+}
+
+.pt-32{
+  padding-top: 8rem;
 }
 
 .pt-8{
   padding-top: 2rem;
 }
 
-.pt-32{
-  padding-top: 8rem;
+.text-left{
+  text-align: left;
 }
 
 .text-center{
@@ -1109,6 +1089,10 @@ video {
 
 .font-jakarta{
   font-family: Plus Jakarta Sans;
+}
+
+.font-serif{
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 .text-2xl{
@@ -1232,16 +1216,8 @@ video {
   text-decoration-line: underline;
 }
 
-.opacity-90{
-  opacity: 0.9;
-}
-
 .opacity-80{
   opacity: 0.8;
-}
-
-.opacity-70{
-  opacity: 0.7;
 }
 
 .shadow-lg{
