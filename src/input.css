@@ -43,6 +43,26 @@
   @apply blur-[0.8px];
 }
 
+/* ----------------- CHARTS VIEW ----------------- */
+.btn__charts {
+  @apply flex flex-col justify-center items-center border-[2px] border-solid border-orange-500 rounded-full p-2 w-[130px] h-[130px] shadow-xl bg-gray-50 hover:bg-orange-300 hover:text-gray-50 hover:border-azul duration-150;
+}
+
+.btn__charts-active {
+  @apply bg-orange-300 text-gray-50 border-azul -translate-y-2;
+}
+
+.btn__pagination {
+  @apply font-amatic text-azulEscuro text-3xl font-bold bg-gray-50 p-3 rounded-lg shadow-lg;
+}
+
+.btn__pagination-active {
+  @apply text-gray-50 text-4xl underline  bg-orange-400  shadow-xl;
+}
+.container__btns {
+  @apply flex flex-row justify-center items-center gap-4;
+}
+
 /* ------------------ GAME VIEW ----------------- */
 .borders {
   @apply border-orange-400 border-solid border border-b-0;
