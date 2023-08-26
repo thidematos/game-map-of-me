@@ -41,5 +41,9 @@ const init = function () {
   window.addEventListener('ended', (event) => {
     model.changeStateEndGame();
   });
+
+  window.addEventListener('begin', (event) => {
+    model.changeStateBegin();
+  });
 };
 init();

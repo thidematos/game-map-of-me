@@ -138,7 +138,65 @@ class="main w-screen min-h-screen bg-gray-50 flex flex-col justify-evenly items-
     this._data = data;
 
     this._body.insertAdjacentHTML('beforeend', component);
+    this.renderBeginModal();
     this._verifyEndGame();
+  }
+
+  generateBeginModal() {
+    return `
+    <div
+    class="bg-[rgba(0,0,0,0.39)] modal__cover w-screen h-screen absolute z-[9998]"
+  ></div>
+  <div class="modal__begin">
+    <div class="w-full flex flex-row justify-evenly items-center">
+      <img src="./assets/logo300.png" alt="" class="w-[15%]" />
+      <div class="flex flex-col justify-center items-center gap-3">
+        <h2 class="text-orange-400 text-5xl font-amatic">
+          Bem vindo, aventureiro!
+        </h2>
+        <h2 class="text-xl">Sua missão é explorar a floresta!</h2>
+      </div>
+      <div
+        data-hash="adventure-map"
+        class="w-[20%] btn__hash flex flex-col justify-center items-center bg-brancoAzulado p-2 rounded-lg shadow-xl cursor-pointer text-orange-400  hover:bg-orange-400 hover:text-gray-50"
+      >
+        <img src="./assets/map.png" alt="" class="drop-shadow-lg w-[60%]" />
+        <h4
+          class="font-amatic font-bold text-3xl drop-shadow-lg"
+        >
+          Retornar à aventura!
+        </h4>
+      </div>
+    </div>
+    <img
+      src="./assets/unrevelead-map.png"
+      alt=""
+      class="w-[35%] rounded-lg border border-solid border-azulClaro shadow-lg mb-3"
+    />
+    <div
+      class="flex flex-col justify-center items-center gap-3 mb-2 w-[70%] text-center"
+    >
+      <h3>Clique na primeira parte do mapa para iniciar sua aventura!</h3>
+      <h4>
+        A cada quebra-cabeça montado, uma nova parte do mapa será revelado.
+      </h4>
+    </div>
+
+    <div class="w-full flex flex-row justify-center items-center">
+      <h3 class="w-[60%] flex flex-row justify-center font-amatic text-4xl">
+        Prepare-se, aventureiro... E, acima de tudo,
+        <span class="text-orange-400"> divirta-se</span>!
+      </h3>
+    </div>
+
+    <div
+      class="flex flex-row justify-center items-center w-[80%] gap-20 mt-6"
+    >
+      <img src="./assets/fiap.png" alt="" class="w-[20%]" />
+      <img src="./assets/palo-alto.png" alt="" class="w-[20%]" />
+    </div>
+  </div>
+    `;
   }
 
   generateEndModal() {
@@ -146,7 +204,7 @@ class="main w-screen min-h-screen bg-gray-50 flex flex-col justify-evenly items-
     <div
     class="modal__cover bg-[rgba(0,0,0,0.39)] w-screen h-screen absolute z-[9998]"
   ></div>
-  <div class="modal__victory">
+  <div class="modal__ended">
     <div class="w-full flex flex-row justify-evenly items-center">
       <img src="./assets/logo300.png" alt="" class="w-[15%]" />
       <div class="flex flex-col justify-center items-center gap-3">
@@ -155,11 +213,11 @@ class="main w-screen min-h-screen bg-gray-50 flex flex-col justify-evenly items-
       </div>
       <div
         data-hash="adventure-map"
-        class="w-[20%] btn__hash flex flex-col justify-center items-center bg-brancoAzulado p-2 rounded-lg shadow-xl cursor-pointer"
+        class="w-[20%] btn__hash flex flex-col justify-center items-center bg-brancoAzulado p-2 rounded-lg shadow-xl cursor-pointer text-orange-400  hover:bg-orange-400 hover:text-gray-50"
       >
         <img src="./assets/map.png" alt="" class="drop-shadow-lg w-[60%]" />
         <h4
-          class="font-amatic font-bold text-3xl text-orange-400 drop-shadow-lg"
+          class="font-amatic font-bold text-3xl  drop-shadow-lg"
         >
           Retornar à aventura!
         </h4>
@@ -189,15 +247,26 @@ class="main w-screen min-h-screen bg-gray-50 flex flex-col justify-evenly items-
     `;
   }
 
-  _handleModalCover() {
-    const modal = document.querySelector('.modal__victory');
-    const cover = document.querySelector('.modal__cover');
-    const event = new CustomEvent('ended', { detail: this._data });
+  renderBeginModal() {
+    if (!this._data.currentUser.alreadyBegin) {
+      const html = this.generateBeginModal();
+      this._body.insertAdjacentHTML('afterbegin', html);
+      this._handleModalCover('begin');
+    }
+  }
 
-    cover.addEventListener('click', (e) => {
-      window.dispatchEvent(event);
-      modal.remove();
-      cover.remove();
+  _handleModalCover(modal) {
+    const modalEl = document.querySelector(`.modal__${modal}`);
+    const cover = document.querySelector('.modal__cover');
+    const event = new CustomEvent(`${modal}`, { detail: this._data });
+    const btnHash = document.querySelector('.btn__hash');
+
+    [btnHash, cover].forEach((element) => {
+      element.addEventListener('click', (e) => {
+        window.dispatchEvent(event);
+        modalEl.remove();
+        cover.remove();
+      });
     });
   }
 
@@ -209,7 +278,7 @@ class="main w-screen min-h-screen bg-gray-50 flex flex-col justify-evenly items-
     if (!this._data.currentUser.alreadyEnded) {
       const html = this.generateEndModal();
       this._body.insertAdjacentHTML('afterbegin', html);
-      this._handleModalCover();
+      this._handleModalCover('ended');
     }
   }
 }

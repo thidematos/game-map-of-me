@@ -25,7 +25,7 @@ class levelSixView extends View {
                   </p>
                   <a
                     data-hash="adventure-map"
-                    class="btn__hash flex flex-col justify-center items-center font-amatic text-3xl drop-shadow-md font-bold text-azul"
+                    class="btn__hash flex flex-col justify-center items-center font-amatic text-3xl drop-shadow-md font-bold text-azul hover:bg-orange-400 hover:text-gray-50" 
                     ><img
                       src="assets/map.png"
                       alt=""
@@ -86,7 +86,7 @@ class levelSixView extends View {
                 </div>
                 <a
                   data-hash="adventure-map"
-                  class="btn__hash absolute left-32 top-[60%] flex flex-col justify-center items-center font-amatic text-3xl text-gray-700 font-bold bg-azulClaro p-4 rounded-lg shadow-xl drop-shadow-lg"
+                  class="btn__hash absolute left-32 top-[60%] flex flex-col justify-center items-center font-amatic text-3xl text-gray-700 font-bold bg-azulClaro p-4 rounded-lg shadow-xl drop-shadow-lg hover:bg-orange-400 hover:text-gray-50"
                   ><img src="assets/map.png" alt="" class="drop-shadow-md" />Mapa da
                   Aventura!</a
                 >

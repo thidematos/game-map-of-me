@@ -19,11 +19,11 @@ class AnalyticsView extends View {
     >
       <div
         data-hash="adventure-map"
-        class="btn__hash flex flex-col justify-center items-center bg-brancoAzulado p-6 rounded-lg shadow-xl cursor-pointer max-w-[18%]"
+        class="btn__hash flex flex-col justify-center items-center bg-brancoAzulado p-6 rounded-lg shadow-xl cursor-pointer text-orange-400  hover:bg-orange-400 hover:text-gray-50 max-w-[18%]"
       >
         <img src="./assets/map.png" alt="" class="w-[60%] drop-shadow-lg" />
         <h4
-          class="font-amatic font-bold text-4xl text-orange-400 drop-shadow-lg"
+          class="font-amatic font-bold text-4xl  drop-shadow-lg"
         >
           Retornar à aventura!
         </h4>

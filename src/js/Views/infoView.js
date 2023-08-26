@@ -13,11 +13,11 @@ class InfoView extends View {
           <div class="flex flex-row justify-center items-center gap-10">
             <div
               data-hash="adventure-map"
-              class="btn__hash flex flex-col justify-center items-center absolute left-16 bg-brancoAzulado p-6 rounded-lg shadow-xl cursor-pointer"
+              class="btn__hash flex flex-col justify-center items-center absolute left-16 bg-brancoAzulado text-orange-400  hover:bg-orange-400 hover:text-gray-50 p-6 rounded-lg shadow-xl cursor-pointer"
             >
               <img src="./assets/map.png" alt="" class="drop-shadow-lg" />
               <h4
-                class="font-amatic font-bold text-4xl text-orange-400 drop-shadow-lg"
+                class="font-amatic font-bold text-4xl  drop-shadow-lg"
               >
                 Retornar à aventura!
               </h4>

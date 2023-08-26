@@ -43,7 +43,8 @@
   @apply blur-[0.8px];
 }
 
-.modal__victory {
+.modal__victory,
+.modal__begin {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

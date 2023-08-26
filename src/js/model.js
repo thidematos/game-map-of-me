@@ -75,6 +75,7 @@ export const state = {
       mapEight: false,
     },
     alreadyEnded: false,
+    alreadyBegin: false,
   },
   currentHash: '',
   stopperTimer: '',
@@ -119,4 +120,8 @@ export const getResults = function (data) {
 
 export const changeStateEndGame = function () {
   return (state.currentUser.alreadyEnded = true);
+};
+
+export const changeStateBegin = function () {
+  return (state.currentUser.alreadyBegin = true);
 };
