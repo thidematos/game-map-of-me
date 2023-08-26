@@ -22,6 +22,19 @@
   @apply bg-gray-50 text-orange-400 drop-shadow-md shadow-md;
 }
 
+/* ---------------- SIGN UP VIEW ---------------- */
+.input__container {
+  @apply w-full flex flex-col justify-center items-start gap-2;
+}
+
+.input__label {
+  @apply text-azul font-bold font-jakarta text-lg drop-shadow-md;
+}
+
+.input__area {
+  @apply w-full font-jakarta placeholder:text-center placeholder:font-jakarta p-2 border border-solid border-azulClaro rounded shadow-md;
+}
+
 /* ------------------ MAP VIEW ----------------- */
 .aside__container {
   @apply flex flex-col justify-center items-center gap-4 bg-brancoAzulado p-8 rounded-xl shadow-md border border-solid border-orange-400 text-gray-700 cursor-pointer hover:bg-orange-300 hover:text-gray-50 duration-100;

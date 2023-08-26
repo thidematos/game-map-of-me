@@ -21,6 +21,9 @@ module.exports = {
         page1: "url('../src/assets/page.png')",
         page2: "url('../src/assets/page-2.png')",
       },
+      backgroundSize: {
+        '50%': '80%',
+      },
     },
   },
   plugins: [],

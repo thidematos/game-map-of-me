@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../dist/output.css" />
+    <script
+      defer
+      src="https://kit.fontawesome.com/1d41b3ab2c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav
+      class="h-[10vh] flex flex-row justify-center items-center bg-azulEscuro shadow-lg"
+    >
+      <ul
+        class="flex flex-row w-screen justify-evenly items-center h-full font-jakarta text-xl text-gray-50"
+      >
+        <li class="list__item">Início</li>
+        <li class="list__item">Jornada</li>
+        <li class="list__item">Exploradores</li>
+        <li class="font-amatic text-3xl list__item list__item-active">
+          Junte-se!
+        </li>
+        <li data-hash="login" class="btn__hash font-amatic text-3xl list__item">
+          Jogar!
+        </li>
+      </ul>
+    </nav>
+    <main class="flex flex-row justify-center items-center h-[85vh]">
+      <div class="w-[45%] h-full"></div>
+      <form
+        action=""
+        class="flex flex-col justify-center items-center w-[30%] p-10 bg-logo bg-no-repeat bg-50% bg-center object-contain gap-3"
+      >
+        <div class="flex flex-col justify-center items-center gap-4 mb-4">
+          <h2
+            class="font-amatic text-5xl text-azulEscuro bg-gray-50 p-3 rounded-lg shadow-lg drop-shadow-lg"
+          >
+            Torne-se um explorador!
+          </h2>
+          <h3 class="font-jakarta text-lg text-gray-700 drop-shadow-lg">
+            Cadastre-se para ter acesso antecipado.
+          </h3>
+        </div>
+        <div class="input__container">
+          <label for="input__email" class="input__label">Email</label>
+          <input
+            type="text"
+            class="input__area"
+            id="input__email"
+            placeholder="email@dominio.com"
+          />
+        </div>
+        <div class="input__container">
+          <label for="input__password" class="input__label">Senha</label>
+          <input
+            type="password"
+            id="input__password"
+            class="input__area"
+            placeholder="Insira sua senha"
+          />
+        </div>
+        <div class="input__container">
+          <label for="input__password-confirm" class="input__label"
+            >Repita a sua senha</label
+          >
+          <input
+            type="password"
+            id="input__password-confirm"
+            class="input__area"
+            placeholder="Repita sua senha"
+          />
+        </div>
+        <div class="input__container">
+          <label for="input__pretends" class="input__label">Relato</label>
+          <textarea
+            rows="6"
+            id="input__pretends"
+            placeholder="Insira suas sugestões, comentários e expectativas referentes ao The Map of Me"
+            class="w-full border border-solid border-azul p-3"
+            required=""
+          ></textarea>
+        </div>
+        <div>
+          <input
+            type="submit"
+            class="font-amatic p-3 rounded-lg text-4xl font-bold bg-orange-400 text-gray-50 duration-150 hover:underline cursor-pointer border solid border-orange-300"
+            value="Juntar-se!"
+          />
+        </div>
+      </form>
+      <div
+        class="ml-10 w-[45%] h-full flex flex-col items-start justify-center font-jakarta gap-3"
+      >
+        <ul
+          class="flex flex-col justify-center items-start gap-3 text-center list-disc list-inside text-gray-700"
+        >
+          <li class="text-orange-400 list-none text-lg">
+            A senha deve conter:
+          </li>
+          <li>Uma letra maiúscula</li>
+          <li>Um número</li>
+          <li>Um caractere especial</li>
+          <li>Mínimo de 8 dígitos</li>
+        </ul>
+      </div>
+    </main>
+    <footer
+      class="w-screen bg-brancoAzulado h-[5vh] flex flex-row justify-center items-center font-amatic text-gray-800 text-3xl"
+    >
+      The Map of Me
+    </footer>
+  </body>
+</html>
