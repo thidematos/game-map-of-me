@@ -43,6 +43,14 @@
   @apply blur-[0.8px];
 }
 
+.modal__victory {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @apply rounded-lg w-[60vw] h-[70vh] absolute z-[9999] pt-5 bg-gray-50 flex flex-col justify-start items-center font-jakarta text-gray-700 object-contain font-bold tracking-wide drop-shadow-md;
+}
+
 /* ----------------- CHARTS VIEW ----------------- */
 .btn__charts {
   @apply flex flex-col justify-center items-center border-[2px] border-solid border-orange-500 rounded-full p-2 w-[130px] h-[130px] shadow-xl bg-gray-50 hover:bg-orange-300 hover:text-gray-50 hover:border-azul duration-150;

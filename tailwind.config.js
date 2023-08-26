@@ -18,6 +18,8 @@ module.exports = {
       },
       backgroundImage: {
         logo: "url('../src/assets/backgroundLogo.png')",
+        page1: "url('../src/assets/page.png')",
+        page2: "url('../src/assets/page-2.png')",
       },
     },
   },

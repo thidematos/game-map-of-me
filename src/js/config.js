@@ -9,8 +9,8 @@ import mapFiveView from './Views/mapFiveView.js';
 import mapSixView from './Views/mapSixView.js';
 import mapSevenView from './Views/mapSevenView.js';
 import mapEightView from './Views/mapEightView.js';
-import chartsView from './Views/analyticsView.js';
 import analyticsView from './Views/analyticsView.js';
+import memoriesView from './Views/memoriesView.js';
 
 export const USER = {
   user: 'raizer50@gmail.com',
@@ -34,6 +34,7 @@ export const HASHS = [
   'mapSeven',
   'mapEight',
   'analytics',
+  'memories',
 ];
 
 export const VIEWS = [
@@ -49,4 +50,5 @@ export const VIEWS = [
   mapSevenView,
   mapEightView,
   analyticsView,
+  memoriesView,
 ];

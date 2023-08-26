@@ -8,8 +8,6 @@ import { instanceView } from './Views/view.js';
 
 import loginView from './Views/loginView.js';
 
-import mapView from './Views/mapView.js';
-
 const controlLogin = function () {
   const [email, password] = loginView.getInputValues();
 
@@ -38,6 +36,10 @@ const init = function () {
   loginView.addHandlerLogin(controlLogin);
   window.addEventListener('victory', (event) => {
     model.getResults(event.detail);
+  });
+
+  window.addEventListener('ended', (event) => {
+    model.changeStateEndGame();
   });
 };
 init();

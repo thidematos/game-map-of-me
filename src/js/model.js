@@ -64,6 +64,17 @@ export const state = {
         hints: '',
       },
     },
+    toWin: {
+      mapOne: false,
+      mapTwo: false,
+      mapThree: false,
+      mapFour: false,
+      mapFive: false,
+      mapSix: false,
+      mapSeven: false,
+      mapEight: false,
+    },
+    alreadyEnded: false,
   },
   currentHash: '',
   stopperTimer: '',
@@ -101,5 +112,11 @@ export const getResults = function (data) {
   state.currentUser.levels[data.id].durationToComplete = data.data.completeTime;
   state.currentUser.levels[data.id].hints = data.data.hints;
 
-  console.log(state);
+  state.currentUser.toWin[data.id] = true;
+
+  if (state.currentUser.toWin) console.log(state);
+};
+
+export const changeStateEndGame = function () {
+  return (state.currentUser.alreadyEnded = true);
 };

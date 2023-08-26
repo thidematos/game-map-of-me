@@ -15,7 +15,7 @@ class levelFiveView extends View {
                 <img src="assets/end-5.png" alt="" class="w-[40%]" />
                 <div class="flex flex-col justify-evenly items-center w-1/2 h-full">
                   <h1 class="font-amatic text-5xl text-orange-300 font-bold">
-                  Juntos de nossos amigos, podemos enfrentar qualquer desafio!
+                  Uma risada tímida!
                   </h1>
                   <p class="text-lg font-jakarta text-gray-700 ">
                       ${data.currentUser.name} deu uma risada tímida, percebendo que o filhote estava apenas curioso, e não ameaçador. Ele se sentiu aliviado e riu de toda a situação!

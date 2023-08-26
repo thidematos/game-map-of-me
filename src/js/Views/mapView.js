@@ -21,12 +21,7 @@ class="main w-screen min-h-screen bg-gray-50 flex flex-col justify-evenly items-
     <img src="assets/logo300.png" alt="" class="w-[40%]" />
     <h1 class="font-amatic text-6xl">The Map of Me</h1>
   </div>
-  <div
-    data-hash="options"
-    class="aside__container btn__hash w-[15vw] h-[30vh]"
-  >
-    <img src="assets/logout.png" alt="" class="w-[70%]" />
-    <h3 class="aside__text">Opções</h3>
+  <div class="  w-[15vw] h-[30vh]">
   </div>
 </div>
 
@@ -136,6 +131,86 @@ class="main w-screen min-h-screen bg-gray-50 flex flex-col justify-evenly items-
 </section>
 </main>
 `;
+  }
+
+  renderHTML(component, data) {
+    this._clearParentElement();
+    this._data = data;
+
+    this._body.insertAdjacentHTML('beforeend', component);
+    this._verifyEndGame();
+  }
+
+  generateEndModal() {
+    return `
+    <div
+    class="modal__cover bg-[rgba(0,0,0,0.39)] w-screen h-screen absolute z-[9998]"
+  ></div>
+  <div class="modal__victory">
+    <div class="w-full flex flex-row justify-evenly items-center">
+      <img src="./assets/logo300.png" alt="" class="w-[15%]" />
+      <div class="flex flex-col justify-center items-center gap-3">
+        <h2 class="text-orange-400 text-5xl font-amatic">Parábens!</h2>
+        <h2 class="text-xl">O mapa da floresta foi inteiro descoberto!</h2>
+      </div>
+      <div
+        data-hash="adventure-map"
+        class="w-[20%] btn__hash flex flex-col justify-center items-center bg-brancoAzulado p-2 rounded-lg shadow-xl cursor-pointer"
+      >
+        <img src="./assets/map.png" alt="" class="drop-shadow-lg w-[60%]" />
+        <h4
+          class="font-amatic font-bold text-3xl text-orange-400 drop-shadow-lg"
+        >
+          Retornar à aventura!
+        </h4>
+      </div>
+    </div>
+    <img
+      src="./assets/fullMap.png"
+      alt=""
+      class="w-[35%] rounded-lg border border-solid border-azulClaro shadow-lg mb-3"
+    />
+    <div class="flex flex-col justify-center items-center gap-3 mb-2">
+      <h3>Fique a vontade para jogar novamente =]</h3>
+      <h4>
+        Esperamos que tenha se divertido e aprendido um pouco mais sobre suas
+        emoções, seu próprio mapa, seu...
+      </h4>
+    </div>
+    <h5 class="font-amatic text-azulEscuro text-5xl mb-4">The Map of Me!</h5>
+    <div class="w-full flex flex-row justify-center items-center">
+      <img src="./assets/fiap.png" alt="" class="w-[20%]" />
+      <h3 class="w-[50%] flex flex-row justify-center">
+        Obrigado por embarcar conosco nessa jornada!
+      </h3>
+      <img src="./assets/palo-alto.png" alt="" class="w-[20%]" />
+    </div>
+  </div>
+    `;
+  }
+
+  _handleModalCover() {
+    const modal = document.querySelector('.modal__victory');
+    const cover = document.querySelector('.modal__cover');
+    const event = new CustomEvent('ended', { detail: this._data });
+
+    cover.addEventListener('click', (e) => {
+      window.dispatchEvent(event);
+      modal.remove();
+      cover.remove();
+    });
+  }
+
+  _verifyEndGame() {
+    const wins = Object.values(this._data.currentUser.toWin);
+
+    if (!wins.every((win) => win === true)) return;
+
+    if (!this._data.currentUser.alreadyEnded) {
+      const html = this.generateEndModal();
+      this._body.insertAdjacentHTML('afterbegin', html);
+      this._handleModalCover();
+    }
   }
 }
 
