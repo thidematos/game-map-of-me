@@ -574,6 +574,10 @@ video {
   position: absolute;
 }
 
+.bottom-\[1\%\]{
+  bottom: 1%;
+}
+
 .left-16{
   left: 4rem;
 }
@@ -582,44 +586,16 @@ video {
   left: 8rem;
 }
 
+.left-\[39\.5\%\]{
+  left: 39.5%;
+}
+
 .right-32{
   right: 8rem;
 }
 
 .top-\[60\%\]{
   top: 60%;
-}
-
-.bottom-\[1\%\]{
-  bottom: 1%;
-}
-
-.left-\[40\%\]{
-  left: 40%;
-}
-
-.left-\[45\%\]{
-  left: 45%;
-}
-
-.left-\[35\%\]{
-  left: 35%;
-}
-
-.left-\[38\%\]{
-  left: 38%;
-}
-
-.left-\[42\%\]{
-  left: 42%;
-}
-
-.left-\[39\%\]{
-  left: 39%;
-}
-
-.left-\[39\.5\%\]{
-  left: 39.5%;
 }
 
 .z-\[9998\]{
@@ -691,12 +667,12 @@ video {
   height: 10vh;
 }
 
-.h-\[30vh\]{
-  height: 30vh;
+.h-\[250px\]{
+  height: 250px;
 }
 
-.h-\[360px\]{
-  height: 360px;
+.h-\[30vh\]{
+  height: 30vh;
 }
 
 .h-\[40vh\]{
@@ -741,10 +717,6 @@ video {
 
 .h-screen{
   height: 100vh;
-}
-
-.h-\[250px\]{
-  height: 250px;
 }
 
 .min-h-\[50vh\]{
@@ -873,10 +845,6 @@ video {
 
 .cursor-pointer{
   cursor: pointer;
-}
-
-.cursor-not-allowed{
-  cursor: not-allowed;
 }
 
 .list-inside{
@@ -1452,11 +1420,6 @@ video {
 .text-yellow-400{
   --tw-text-opacity: 1;
   color: rgb(250 204 21 / var(--tw-text-opacity));
-}
-
-.text-yellow-300{
-  --tw-text-opacity: 1;
-  color: rgb(253 224 71 / var(--tw-text-opacity));
 }
 
 .underline{
