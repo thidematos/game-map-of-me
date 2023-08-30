@@ -18,6 +18,7 @@
   "homepage": "https://github.com/thidematos/game-map-of-me#readme",
   "dependencies": {
     "chart.js": "^4.4.0",
+    "smooth-scrollbar": "^8.8.4",
     "validator": "^13.11.0"
   }
 }

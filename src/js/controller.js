@@ -45,5 +45,7 @@ const init = function () {
   window.addEventListener('begin', (event) => {
     model.changeStateBegin();
   });
+
+  window.addEventListener('newReview', model.changeReviewStatus);
 };
 init();

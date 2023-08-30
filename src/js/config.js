@@ -11,6 +11,7 @@ import mapSevenView from './Views/mapSevenView.js';
 import mapEightView from './Views/mapEightView.js';
 import analyticsView from './Views/analyticsView.js';
 import memoriesView from './Views/memoriesView.js';
+import feedbacksView from './Views/feedbacks.js';
 
 export const USER = {
   user: 'raizer50@gmail.com',
@@ -35,6 +36,7 @@ export const HASHS = [
   'mapEight',
   'analytics',
   'memories',
+  'feedback',
 ];
 
 export const VIEWS = [
@@ -51,4 +53,5 @@ export const VIEWS = [
   mapEightView,
   analyticsView,
   memoriesView,
+  feedbacksView,
 ];

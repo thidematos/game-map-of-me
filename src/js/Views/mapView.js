@@ -21,7 +21,12 @@ class="main w-screen min-h-screen bg-gray-50 flex flex-col justify-evenly items-
     <img src="assets/logo300.png" alt="" class="w-[40%]" />
     <h1 class="font-amatic text-6xl">The Map of Me</h1>
   </div>
-  <div class="  w-[15vw] h-[30vh]">
+  <div
+    data-hash="feedback"
+    class="aside__container btn__hash w-[15vw] h-[30vh]"
+  >
+    <img src="assets/logout.png" alt="" />
+    <h3 class="aside__text">Relatos!</h3>
   </div>
 </div>
 

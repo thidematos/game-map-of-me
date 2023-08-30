@@ -6,6 +6,11 @@ export const state = {
     name: '',
     email: '',
     id: '',
+    feedbacks: {
+      hasFeedback: false,
+      feedbacks: [],
+    },
+
     levels: {
       mapOne: {
         completed: false,
@@ -124,4 +129,10 @@ export const changeStateEndGame = function () {
 
 export const changeStateBegin = function () {
   return (state.currentUser.alreadyBegin = true);
+};
+
+export const changeReviewStatus = function (event) {
+  state.currentUser.feedbacks.hasFeedback = true;
+  state.currentUser.feedbacks.feedbacks.push(event.detail);
+  console.log(state);
 };

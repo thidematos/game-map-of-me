@@ -57,12 +57,25 @@
 }
 
 .modal__ended,
-.modal__begin {
+.modal__begin,
+.modal__comment {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
   @apply rounded-lg w-[60vw] h-[70vh] absolute z-[9999] pt-5 bg-gray-50 flex flex-col justify-start items-center font-jakarta text-gray-700 object-contain font-bold tracking-wide drop-shadow-md;
+}
+/* ---------------- FEEDBACKS VIEW ---------------- */
+.modal__levelContainer {
+  @apply flex flex-row justify-center items-center text-sm font-normal;
+}
+
+.modal__btn-level {
+  @apply flex flex-col justify-center items-center cursor-default;
+}
+
+.modal__btn-level-img {
+  @apply rounded-full border border-solid border-orange-400 w-[80%] hover:bg-azulClaro duration-100 cursor-pointer;
 }
 
 /* ----------------- CHARTS VIEW ----------------- */
