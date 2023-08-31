@@ -88,8 +88,15 @@ class LoginPage extends View {
   }
 
   getInputValues() {
-    const email = this._inputEmail.value;
-    const password = this._inputPassword.value;
+    let email = this._inputEmail.value;
+    let password = this._inputPassword.value;
+
+    //SANITIZAÇÃO
+    email = validator.escape(email);
+    email = validator.isEmail(email) ? email : '';
+    password = validator.escape(password);
+
+    password = validator.isAlphanumeric(password) ? password : '';
 
     return [email, password];
   }
