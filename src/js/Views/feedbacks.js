@@ -639,7 +639,7 @@ class FeedbackView extends View {
       'z',
       '!',
       '?',
-      '.',
+      ',',
     ]);
     this._crudData.description = data;
   }
