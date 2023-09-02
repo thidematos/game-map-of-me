@@ -640,6 +640,7 @@ class FeedbackView extends View {
       '!',
       '?',
       ',',
+      ' ',
     ]);
     this._crudData.description = data;
   }
