@@ -13,7 +13,7 @@ class levelEightView extends View {
                 class="modal hidden bg-gray-100 w-[70vw] h-[70vh] absolute z-[9999] rounded-lg shadow-lg flex-row justify-center items-center p-10"
               >
                 <img src="assets/end-8.png" alt="" class="w-[40%]" />
-                <div class="flex flex-col justify-evenly items-center w-1/2 h-full">
+                <div class="flex flex-col justify-evenly items-center w-1/2 h-full py-10 pl-10">
                   <h1 class="font-amatic text-5xl text-orange-300 font-bold">
                     O tesouro sempre esteve dentro de nós!
                   </h1>
@@ -25,7 +25,7 @@ class levelEightView extends View {
                   </p>
                   <a
                     data-hash="adventure-map"
-                    class="btn__hash flex flex-col justify-center items-center font-amatic text-3xl drop-shadow-md font-bold text-azul  hover:bg-orange-400 hover:text-gray-50"
+                    class="btn__hash flex flex-col justify-center items-center font-amatic text-3xl drop-shadow-md font-bold  p-4 rounded-lg shadow-xl text-azul   hover:bg-orange-400 hover:text-gray-50"
                     ><img
                       src="assets/map.png"
                       alt=""
@@ -62,7 +62,7 @@ class levelEightView extends View {
                     <p class="hint__description text-xl text-center">
                       Quando o sol começava a se pôr no horizonte, ${data.currentUser.name} avistou uma figura familiar entre as árvores. Emocionado, ${data.currentUser.name} avistou seu pai, sorrindo orgulhosamente para ele. Seu pai sempre esteve ao seu lado, apoiando ${data.currentUser.name} de longe, e deixando ele explorar a floresta e descobrir as <span class="hint--strong text-xl">riqueza das emoções</span> por conta própria. 
                     </p>
-                    <p class="hint__keyword text-xl flex flex-row items-center gap-2">
+                    <p class="hint__description text-xl text-center">
                       Os novos amigos que ${data.currentUser.name} havia feito durante sua aventura apareceram um por um, trazendo consigo as histórias e laços que tinham formado. Cada um trazia uma lembrança especial da jornada...
                     </p>
                   </div>

@@ -13,7 +13,7 @@ class levelSevenView extends View {
                 class="modal hidden bg-gray-100 w-[60vw] h-[60vh] absolute z-[9999] rounded-lg shadow-lg flex-row justify-center items-center p-10"
               >
                 <img src="assets/end-7.png" alt="" class="w-[40%]" />
-                <div class="flex flex-col justify-evenly items-center w-1/2 h-full">
+                <div class="flex flex-col justify-evenly items-center w-1/2 h-full py-10 pl-10">
                   <h1 class="font-amatic text-5xl text-orange-300 font-bold">
                     Sempre há uma esperança!
                   </h1>
@@ -25,7 +25,7 @@ class levelSevenView extends View {
                   </p>
                   <a
                     data-hash="adventure-map"
-                    class="btn__hash flex flex-col justify-center items-center font-amatic text-3xl drop-shadow-md font-bold text-azul hover:bg-orange-400 hover:text-gray-50"
+                    class="btn__hash flex flex-col justify-center items-center font-amatic text-3xl drop-shadow-md font-bold  p-4 rounded-lg shadow-xl text-azul   hover:bg-orange-400 hover:text-gray-50"
                     ><img
                       src="assets/map.png"
                       alt=""
@@ -62,8 +62,8 @@ class levelSevenView extends View {
                     <p class="hint__description text-xl text-center">
                       ${data.currentUser.name} continuava em sua aventura pela floresta... Como não achou nenhum caminho que parecesse levar para o tesouro escondido, ou até mesmo para fora da floresta, nosso explorador ficou com <span class="hint--strong text-xl">medo</span>. ${data.currentUser.name} estava perdendo a <span class="hint--strong text-xl">esperança</span>
                     </p>
-                    <p class="hint__keyword text-xl flex flex-row items-center gap-2">
-                        Prestes a desistir, ${data.currentUser.name}, Milo e Max encontraram o Sr. Panda e Pandinha! Panda e Pandinha disseram o segredo da flotesta para ${data.currentUser.name}... 
+                    <p class="hint__description text-xl text-center">
+                        Prestes a desistir, ${data.currentUser.name}, Milo e Max encontraram o Sr. Panda e Pandinha! Panda e Pandinha disseram o segredo da floresta para ${data.currentUser.name}... 
                     </p>
                   </div>
                   <img src="assets/panda.png" alt="" class="hint__img" />

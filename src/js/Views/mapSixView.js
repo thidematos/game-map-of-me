@@ -13,7 +13,7 @@ class levelSixView extends View {
                 class="modal hidden bg-gray-100 w-[70vw] h-[70vh] absolute z-[9999] rounded-lg shadow-lg flex-row justify-center items-center p-10"
               >
                 <img src="assets/end-6.png" alt="" class="w-[40%]" />
-                <div class="flex flex-col justify-evenly items-center w-1/2 h-full">
+                <div class="flex flex-col justify-evenly items-center w-1/2 h-full py-10 pl-10">
                   <h1 class="font-amatic text-5xl text-orange-300 font-bold">
                   Um simples ato de bondade podia fazer toda a diferença!
                   </h1>
@@ -25,7 +25,7 @@ class levelSixView extends View {
                   </p>
                   <a
                     data-hash="adventure-map"
-                    class="btn__hash flex flex-col justify-center items-center font-amatic text-3xl drop-shadow-md font-bold text-azul hover:bg-orange-400 hover:text-gray-50" 
+                    class="btn__hash flex flex-col justify-center items-center font-amatic text-3xl drop-shadow-md font-bold  p-4 rounded-lg shadow-xl text-azul   hover:bg-orange-400 hover:text-gray-50" 
                     ><img
                       src="assets/map.png"
                       alt=""
